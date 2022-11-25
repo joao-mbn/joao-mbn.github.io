@@ -39,6 +39,8 @@
 }
 
 :root {
+  --mid-gray: #777777;
+
   --filter-black: brightness(0) saturate(100%);
   --filter-yellow: invert(92%) sepia(32%) saturate(1055%) hue-rotate(356deg) brightness(115%) contrast(107%);
   --filter-gray: invert(33%) sepia(0%) saturate(708%) hue-rotate(249deg) brightness(94%) contrast(87%);
@@ -69,6 +71,11 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0rem;
 }
 
 h1 {

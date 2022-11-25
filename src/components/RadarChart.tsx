@@ -17,7 +17,7 @@ export function RadarChart({ series, categories, options: passedOptions, header 
 
   const widthMagnifyingFactor = 1.3;
   const bodyWidth = deviceInfos?.bodyWidth ?? MOBILE_SIZE;
-  const sectionWidth = deviceInfos?.device === DeviceEnum.DESKTOP ? bodyWidth / 2 : bodyWidth;
+  const sectionWidth = deviceInfos?.device === DeviceEnum.DESKTOP ? DESKTOP_SIZE / 2 : bodyWidth;
   const chartWidth = Math.min(sectionWidth, DESKTOP_SIZE / 2) * widthMagnifyingFactor;
   const offsetX = (sectionWidth - chartWidth) / 2;
 
@@ -60,12 +60,7 @@ export function RadarChart({ series, categories, options: passedOptions, header 
 
   return (
     <Section style={{ maxWidth: sectionWidth, overflow: 'hidden' }} header={header}>
-      <ReactApexChart
-        type="radar"
-        series={series}
-        options={options}
-        style={{ width: chartWidth, marginBottom: '-3rem' }}
-      />
+      <ReactApexChart type="radar" series={series} options={options} style={{ width: chartWidth }} />
     </Section>
   );
 }

@@ -20,20 +20,20 @@ export default function ContactInfo() {
       <nav>
         <SectionListContent>
           <>
-            <img className="icon" src={addAssetsPath('email.svg')} alt="email" />
-            <Link href={`mailto:${email}`}>{email}</Link>
-          </>
-          <>
             <img className="icon" src={addAssetsPath('smartphone.svg')} alt="phone number" />
             <Link href={`tel:${phone.replace(/(\(| |\)|-)/g, '')}`}>{phone}</Link>
           </>
           <>
-            <img className="icon" src={addAssetsPath('linkedin.svg')} alt="linkedin" />
-            <Link href={addHttps(`linkedin.com/in${linkedin}`)}>{linkedin}</Link>
+            <img className="icon" src={addAssetsPath('email.svg')} alt="email" />
+            <Link href={`mailto:${email}`}>{email}</Link>
           </>
           <>
             <img className="icon" src={addAssetsPath('web.svg')} alt="website" />
             <Link href={addHttps(website)}>{website}</Link>
+          </>
+          <>
+            <img className="icon" src={addAssetsPath('linkedin.svg')} alt="linkedin" />
+            <Link href={addHttps(`linkedin.com/in${linkedin}`)}>{linkedin}</Link>
           </>
           <>
             <img className="icon" src={addAssetsPath('leetcode.svg')} alt="leet code" />

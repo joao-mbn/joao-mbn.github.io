@@ -28,7 +28,7 @@ export const PT_BR = {
   SKILLS: 'Habilidades',
   SOFTWARE_DEVELOPMENT_INTERN: 'Estagiário de Desenvolvimento de Software',
   SPEAKING: 'Fala',
-  UFRJ: 'Federal University of Rio de Janeiro',
+  UFRJ: 'Universidade Federal do Rio de Janeiro',
   UNDERGRADUATE_RESEARCHER: 'Bolsista de Iniciação Tecnológica',
   UNIVERSITY_COURSE: 'Engenharia Química',
   WORK_EXPERIENCE: 'Experiência',

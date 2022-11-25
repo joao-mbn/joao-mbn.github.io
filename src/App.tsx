@@ -44,13 +44,13 @@ export default function App() {
             <div style={{ flex: '1 1 50%' }}>
               <Education />
             </div>
+            <WorkExperience />
             <div style={{ flex: '1 1 50%' }}>
               <SkillsChart />
             </div>
             <div style={{ flex: '1 1 50%' }}>
               <LanguagesChart />
             </div>
-            <WorkExperience />
           </main>
         </div>
       </div>
