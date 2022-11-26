@@ -1,11 +1,9 @@
-import { useContext, useRef, useState } from 'react';
-import { AppContext } from '../contexts/AppContext';
+import { CSSProperties, useRef, useState } from 'react';
 import { LanguageEnum } from '../enums/Language';
 import { PIXEL_TO_REM } from '../utils/constants';
 import { addAssetsPath } from '../utils/strings';
 
 export default function TranslationOptions({ onChange }: { onChange: (language: LanguageEnum) => void }) {
-  const { language } = useContext(AppContext);
   const [toggleShowAll, setToggleShowAll] = useState(false);
 
   const enUSOption = {
@@ -21,14 +19,7 @@ export default function TranslationOptions({ onChange }: { onChange: (language: 
     icon: 'brazil-flag',
   };
 
-  const chosenOption = {
-    [LanguageEnum.English]: enUSOption,
-    [LanguageEnum.German]: deDEOption,
-    [LanguageEnum.Portuguese]: ptBROption,
-  }[language];
-
   const optionsRef = useRef([enUSOption, deDEOption, ptBROption]);
-  const padding = 2 * PIXEL_TO_REM;
   const gap = 1 * PIXEL_TO_REM;
   const optionHeight = 2.4 * PIXEL_TO_REM;
   const containerHeight = toggleShowAll
@@ -50,38 +41,57 @@ export default function TranslationOptions({ onChange }: { onChange: (language: 
     optionsRef.current.unshift(option!);
   }
 
-  function template({ language, icon }: { language: LanguageEnum; icon: string }) {
-    return (
-      <input
-        style={{ height: optionHeight, minWidth: optionHeight }}
-        type="image"
-        className="icon"
-        key={language}
-        onClick={() => {
-          putChosenAsFirst(language);
-          onChange(language);
-          toggle();
-        }}
-        src={addAssetsPath(`${icon}.svg`)}
-        alt={icon.replace('-', ' ')}
-      />
-    );
-  }
+  const Template = ({ icon, ...props }: { icon: string; style?: CSSProperties; onClick: () => void }) => (
+    <input
+      {...props}
+      type="image"
+      className="icon"
+      key={icon}
+      src={addAssetsPath(`${icon}.svg`)}
+      alt={icon.replace('-', ' ')}
+    />
+  );
+
+  const chevronTemplate = (
+    <Template
+      icon="chevron-up"
+      style={{
+        height: '1.5rem',
+        marginTop: '0.3rem',
+        filter: 'var(--primary-text-filter)',
+        transition: 'transform 0.3s',
+        transform: toggleShowAll ? 'rotate(180deg)' : '',
+      }}
+      onClick={toggle}
+    />
+  );
+
+  const flagTemplate = ({ language, icon }: { language: LanguageEnum; icon: string }) => (
+    <Template
+      icon={icon}
+      style={{ height: optionHeight, minWidth: optionHeight }}
+      onClick={() => {
+        putChosenAsFirst(language);
+        onChange(language);
+        toggle();
+      }}
+    />
+  );
 
   return (
-    <div style={{ display: 'flex', marginTop: '-0.5rem', padding, gap }}>
-      <div className="chevron" onClick={toggle} />
+    <div style={{ display: 'flex', marginTop: '-0.5rem', padding: '2rem', gap }}>
+      {chevronTemplate}
       <div
         style={{
           height: containerHeight,
-          transition: 'height 0.2s ease-in-out',
+          transition: 'height 0.3s ease-out',
           display: 'flex',
           flexDirection: 'column',
           gap,
           overflow: 'hidden',
           alignItems: 'flex-end',
         }}>
-        {toggleShowAll ? optionsRef.current.map(option => template(option)) : template(chosenOption)}
+        {optionsRef.current.map(option => flagTemplate(option))}
       </div>
     </div>
   );
