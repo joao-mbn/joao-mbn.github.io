@@ -41,15 +41,8 @@ export default function TranslationOptions({ onChange }: { onChange: (language: 
     optionsRef.current.unshift(option!);
   }
 
-  const Template = ({ icon, ...props }: { icon: string; style?: CSSProperties; onClick: () => void }) => (
-    <input
-      {...props}
-      type="image"
-      className="icon"
-      key={icon}
-      src={addAssetsPath(`${icon}.svg`)}
-      alt={icon.replace('-', ' ')}
-    />
+  const Template = ({ icon, ...props }: { icon: string; key?: string; style?: CSSProperties; onClick: () => void }) => (
+    <input {...props} type="image" className="icon" src={addAssetsPath(`${icon}.svg`)} alt={icon.replace('-', ' ')} />
   );
 
   const chevronTemplate = (
@@ -70,6 +63,7 @@ export default function TranslationOptions({ onChange }: { onChange: (language: 
     <Template
       icon={icon}
       style={{ height: optionHeight, minWidth: optionHeight }}
+      key={String(language)}
       onClick={() => {
         putChosenAsFirst(language);
         onChange(language);

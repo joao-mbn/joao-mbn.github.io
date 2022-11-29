@@ -4,6 +4,7 @@ import ContactInfo from './components/ContactInfo';
 import Education from './components/Education';
 import Header from './components/Header';
 import LanguagesChart from './components/LanguagesChart';
+import PDF from './components/PDF';
 import SkillsChart from './components/SkillsChart';
 import TranslationOptions from './components/TranslationOptions';
 import WorkExperience from './components/WorkExperience';
@@ -31,6 +32,7 @@ export default function App() {
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <Header />
             <div style={{ display: 'flex', gap: '1rem' }}>
+              <PDF />
               <ColorThemeSwitcher
                 toggleTheme={() => setTheme(prevTheme => (prevTheme === 'dark' ? 'light' : 'dark'))}
               />
