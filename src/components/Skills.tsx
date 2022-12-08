@@ -1,11 +1,26 @@
-import Chip from './Chip';
+import { useContext } from 'react';
+import { AppContext } from '../contexts/AppContext';
+import ProgressBar from './ProgressBar';
+import Section from './Section';
+import SectionListContent from './SectionListContent';
 
-export default function Skills({ skills }: { skills: string[] }) {
+export default function SkillsChart() {
+  const { TRANSLATION } = useContext(AppContext);
+  const series = [
+    { name: TRANSLATION.PROGRAMMING_SKILLS, data: [20, 35, 45, 50, 30, 40, 25, 35, 30], color: 'var(--chart-1)' },
+  ];
+  const categories: string[] = ['Git', 'React', 'JS', 'TS', 'CSS', 'HTML', 'C#', 'Python', 'SQL'];
+
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-      {skills.map(skill => (
-        <Chip key={skill}>{skill}</Chip>
-      ))}
-    </div>
+    <Section header={TRANSLATION.SKILLS}>
+      <SectionListContent>
+        <>
+          <ProgressBar progress={80} />
+        </>
+        <>
+          <ProgressBar progress={60} />
+        </>
+      </SectionListContent>
+    </Section>
   );
 }

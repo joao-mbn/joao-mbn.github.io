@@ -16,7 +16,6 @@ export default function Header() {
         <h1>joão nascimento</h1>
         <h2>{TRANSLATION.JUNIOR_FULLSTACK_DEVELOPER}</h2>
       </div>
-      <p>{TRANSLATION.HEADER_DESCRIPTION}</p>
     </header>
   );
 }

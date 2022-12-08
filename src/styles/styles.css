@@ -105,7 +105,7 @@ h3 {
 
 img.icon {
   object-fit: contain;
-  height: 2rem;
+  height: 1.4rem;
   filter: var(--accent-filter-1);
 }
 

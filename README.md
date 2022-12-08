@@ -10,3 +10,6 @@
 
 - Languages chart for some reason gets moved when portuguese legend is toggled.
 - white right side appearing on responsive small screens, apparently when the chart width gets bigger than the body.
+- remove charts altogether, replace with another kind of info representation.
+
+- Show experiences as bullet

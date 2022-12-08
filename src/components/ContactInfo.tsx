@@ -9,9 +9,6 @@ export default function ContactInfo() {
   const email = 'joaombn97@gmail.com';
   const linkedin = '/joaomarcosbatistanascimento';
   const phone = '+55 (21) 99719-1268';
-  const website = 'joao-mbn.github.io';
-  const leetcode = '/joaombn97';
-  const github = '/joao-mbn';
 
   const { TRANSLATION } = useContext(AppContext);
 
@@ -28,20 +25,8 @@ export default function ContactInfo() {
             <Link href={`mailto:${email}`}>{email}</Link>
           </>
           <>
-            <img className="icon" src={addAssetsPath('web.svg')} alt="website" />
-            <Link href={addHttps(website)}>{website}</Link>
-          </>
-          <>
             <img className="icon" src={addAssetsPath('linkedin.svg')} alt="linkedin" />
             <Link href={addHttps(`linkedin.com/in${linkedin}`)}>{linkedin}</Link>
-          </>
-          <>
-            <img className="icon" src={addAssetsPath('leetcode.svg')} alt="leet code" />
-            <Link href={addHttps(`leetcode.com${leetcode}`)}>{leetcode}</Link>
-          </>
-          <>
-            <img className="icon" src={addAssetsPath('github.svg')} alt="github" />
-            <Link href={addHttps(`github.com${github}`)}>{github}</Link>
           </>
         </SectionListContent>
       </nav>

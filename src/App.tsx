@@ -5,9 +5,10 @@ import Education from './components/Education';
 import Header from './components/Header';
 import LanguagesChart from './components/LanguagesChart';
 import PDF from './components/PDF';
-import SkillsChart from './components/SkillsChart';
+import Skills from './components/Skills';
 import TranslationOptions from './components/TranslationOptions';
 import WorkExperience from './components/WorkExperience';
+import WorkSamplesReference from './components/WorkSamplesReference';
 import { AppContext } from './contexts/AppContext';
 import useResponsivity from './hooks/useResponsivity';
 import useTranslation from './hooks/useTranslation';
@@ -39,20 +40,13 @@ export default function App() {
               <TranslationOptions onChange={setLanguage} />
             </div>
           </div>
-          <main style={{ display: 'flex', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1 1 50%' }}>
-              <ContactInfo />
-            </div>
-            <div style={{ flex: '1 1 50%' }}>
-              <Education />
-            </div>
+          <main>
+            <ContactInfo />
             <WorkExperience />
-            <div style={{ flex: '1 1 50%' }}>
-              <SkillsChart />
-            </div>
-            <div style={{ flex: '1 1 50%' }}>
-              <LanguagesChart />
-            </div>
+            <Education />
+            <WorkSamplesReference />
+            <Skills />
+            <LanguagesChart />
           </main>
         </div>
       </div>
