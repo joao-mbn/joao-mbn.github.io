@@ -3,7 +3,7 @@ import { PIXEL_TO_REM } from '../utils/constants';
 export default function ProgressBar({ progress }: { progress: number }) {
   const totalWidth = 8 * PIXEL_TO_REM;
   const absoluteProgress = (totalWidth * progress) / 100;
-  const endDivergence = 0.8 * PIXEL_TO_REM;
+  const endDivergence = 0.6 * PIXEL_TO_REM;
   const beginProgressConvergence = absoluteProgress - endDivergence;
   const beginTotalWidthConvergence = totalWidth - endDivergence;
 

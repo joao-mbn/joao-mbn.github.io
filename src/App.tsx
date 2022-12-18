@@ -3,7 +3,7 @@ import ColorThemeSwitcher from './components/ColorThemeSwitcher';
 import ContactInfo from './components/ContactInfo';
 import Education from './components/Education';
 import Header from './components/Header';
-import LanguagesChart from './components/LanguagesChart';
+import Languages from './components/Languages';
 import PDF from './components/PDF';
 import Skills from './components/Skills';
 import TranslationOptions from './components/TranslationOptions';
@@ -46,7 +46,7 @@ export default function App() {
             <Education />
             <WorkSamplesReference />
             <Skills />
-            <LanguagesChart />
+            <Languages />
           </main>
         </div>
       </div>

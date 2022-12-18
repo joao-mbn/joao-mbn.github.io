@@ -13,6 +13,7 @@ export default function Lollipop() {
         style={{
           height: 'calc(100% - 1rem)',
           border: '0.1rem solid var(--accent-1)',
+          backgroundColor: 'var(--accent-1)',
         }}
       />
     </div>
