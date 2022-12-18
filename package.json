@@ -12,12 +12,10 @@
     "write": "prettier --write src/**/*.{tsx,ts,html,css}"
   },
   "dependencies": {
-    "apexcharts": "^3.36.3",
     "dompurify": "^2.4.1",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",
     "react": "^18.2.0",
-    "react-apexcharts": "^1.4.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

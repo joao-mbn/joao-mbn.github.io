@@ -3,12 +3,6 @@
   --primary-bg: #eeeeee;
 
   --accent-1: #3000ff;
-  --accent-2: #ff3000;
-  --accent-3: #00ff30;
-
-  --chart-1: #3000ffb4;
-  --chart-2: #ff3000b4;
-  --chart-3: #00ff30b4;
 
   /* Use this to reproduce the colors in svgs using the "filter" property.
    * See: https://codepen.io/sosuke/pen/Pjoqqp?editors=1111
@@ -23,12 +17,6 @@
   --primary-bg: #222222;
 
   --accent-1: #30ffff;
-  --accent-2: #ff30ff;
-  --accent-3: #ffff30;
-
-  --chart-1: #30ffffb4;
-  --chart-2: #ff30ffb4;
-  --chart-3: #ffff30b4;
 
   /* Use this to reproduce the colors in svgs using the "filter" property.
    * See: https://codepen.io/sosuke/pen/Pjoqqp?editors=1111
