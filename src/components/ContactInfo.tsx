@@ -8,7 +8,7 @@ import SectionListContent from './SectionListContent';
 export default function ContactInfo() {
   const email = 'joaombn97@gmail.com';
   const linkedin = '/joaomarcosbatistanascimento';
-  const phone = '+55 (21) 99719-1268';
+  const phone = '+55 (21) 99350-4046';
 
   const { TRANSLATION } = useContext(AppContext);
 

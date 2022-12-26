@@ -3,8 +3,15 @@ import { LanguageEnum } from '../enums/Language';
 import { PIXEL_TO_REM } from '../utils/constants';
 import { addAssetsPath } from '../utils/strings';
 
-export default function TranslationOptions({ onChange }: { onChange: (language: LanguageEnum) => void }) {
+export default function TranslationOptions({
+  onChange,
+  parentPositionRef,
+}: {
+  onChange: (language: LanguageEnum) => void;
+  parentPositionRef: HTMLDivElement | null;
+}) {
   const [toggleShowAll, setToggleShowAll] = useState(false);
+  const shouldExpandHorizontally = parentPositionRef?.getBoundingClientRect().left === 0;
 
   const enUSOption = {
     language: LanguageEnum.English,
@@ -20,14 +27,16 @@ export default function TranslationOptions({ onChange }: { onChange: (language: 
   };
 
   const optionsRef = useRef([enUSOption, deDEOption, ptBROption]);
-  const gap = 1 * PIXEL_TO_REM;
-  const optionHeight = 2.4 * PIXEL_TO_REM;
-  const containerHeight = toggleShowAll
-    ? optionsRef.current.length * optionHeight + gap * (optionsRef.current.length - 1)
-    : optionHeight;
+  const gap = (shouldExpandHorizontally ? 1 : 0.3) * PIXEL_TO_REM;
+  const optionMainDimension = 2.4 * PIXEL_TO_REM;
+  const mainDimensionValue = toggleShowAll
+    ? optionsRef.current.length * optionMainDimension + gap * (optionsRef.current.length - 1)
+    : optionMainDimension;
+
+  const mainDimension = shouldExpandHorizontally ? 'width' : 'height';
+  const secondaryDimension = shouldExpandHorizontally ? 'height' : 'width';
 
   function toggle() {
-    document.querySelector('.chevron')?.classList.toggle('inverted');
     setToggleShowAll(prevToggleShowAll => !prevToggleShowAll);
   }
 
@@ -53,7 +62,7 @@ export default function TranslationOptions({ onChange }: { onChange: (language: 
         marginTop: '0.3rem',
         filter: 'var(--primary-text-filter)',
         transition: 'transform 0.3s',
-        transform: toggleShowAll ? 'rotate(180deg)' : '',
+        transform: toggleShowAll ? '' : shouldExpandHorizontally ? 'rotate(90deg)' : 'rotate(180deg)',
       }}
       onClick={toggle}
     />
@@ -62,7 +71,10 @@ export default function TranslationOptions({ onChange }: { onChange: (language: 
   const flagTemplate = ({ language, icon }: { language: LanguageEnum; icon: string }) => (
     <Template
       icon={icon}
-      style={{ height: optionHeight, minWidth: optionHeight }}
+      style={{
+        [mainDimension]: optionMainDimension,
+        ['min' + secondaryDimension.charAt(0).toUpperCase() + secondaryDimension.slice(1)]: optionMainDimension,
+      }}
       key={String(language)}
       onClick={() => {
         putChosenAsFirst(language);
@@ -73,14 +85,14 @@ export default function TranslationOptions({ onChange }: { onChange: (language: 
   );
 
   return (
-    <div style={{ display: 'flex', marginTop: '-0.5rem', padding: '2rem', gap }}>
+    <div style={{ display: 'flex', padding: '2rem 2rem 0 2rem', gap: '1rem' }}>
       {chevronTemplate}
       <div
         style={{
-          height: containerHeight,
-          transition: 'height 0.3s ease-out',
+          [mainDimension]: mainDimensionValue,
+          transition: (shouldExpandHorizontally ? 'width' : 'height') + ' 0.3s ease-out',
           display: 'flex',
-          flexDirection: 'column',
+          flexDirection: shouldExpandHorizontally ? 'row' : 'column',
           gap,
           overflow: 'hidden',
           alignItems: 'flex-end',

@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import ColorThemeSwitcher from './components/ColorThemeSwitcher';
 import ContactInfo from './components/ContactInfo';
 import Education from './components/Education';
 import Header from './components/Header';
 import Languages from './components/Languages';
-import PDF from './components/PDF';
 import Skills from './components/Skills';
 import TranslationOptions from './components/TranslationOptions';
 import WorkExperience from './components/WorkExperience';
@@ -18,37 +17,42 @@ export default function App() {
   const { TRANSLATION, language, setLanguage } = useTranslation();
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
+  useLayoutEffect(() => {
+    (document.getElementById('root') as HTMLElement).setAttribute('data-theme', theme);
+  }, [theme]);
+
+  const utilitiesContainerRef = useRef<HTMLDivElement>(null);
+
   return (
     <AppContext.Provider value={{ deviceInfos, TRANSLATION, language, theme }}>
-      <div data-theme={theme}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          maxWidth: '1024px',
+          minHeight: '100vh',
+        }}>
         <div
           style={{
             display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            minWidth: '360px',
-            maxWidth: '1024px',
-            minHeight: '100vh',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap-reverse',
           }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Header />
-            <div style={{ display: 'flex', gap: '1rem' }}>
-              <PDF />
-              <ColorThemeSwitcher
-                toggleTheme={() => setTheme(prevTheme => (prevTheme === 'dark' ? 'light' : 'dark'))}
-              />
-              <TranslationOptions onChange={setLanguage} />
-            </div>
+          <Header />
+          <div style={{ display: 'flex', marginTop: '-0.5rem' }} ref={utilitiesContainerRef}>
+            <ColorThemeSwitcher toggleTheme={() => setTheme(prevTheme => (prevTheme === 'dark' ? 'light' : 'dark'))} />
+            <TranslationOptions onChange={setLanguage} parentPositionRef={utilitiesContainerRef.current} />
           </div>
-          <main>
-            <ContactInfo />
-            <WorkExperience />
-            <Education />
-            <WorkSamplesReference />
-            <Skills />
-            <Languages />
-          </main>
         </div>
+        <main>
+          <ContactInfo />
+          <WorkExperience />
+          <Education />
+          <WorkSamplesReference />
+          <Skills />
+          <Languages />
+        </main>
       </div>
     </AppContext.Provider>
   );

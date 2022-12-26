@@ -8,7 +8,7 @@ export default function ProgressBar({ progress }: { progress: number }) {
   const beginTotalWidthConvergence = totalWidth - endDivergence;
 
   return (
-    <div style={{ width: totalWidth, minHeight: '1rem', position: 'relative' }}>
+    <div style={{ minWidth: totalWidth, minHeight: '1rem', position: 'relative' }}>
       <div
         style={{
           width: absoluteProgress,
@@ -28,7 +28,7 @@ export default function ProgressBar({ progress }: { progress: number }) {
       />
       <div
         style={{
-          width: totalWidth,
+          minWidth: totalWidth,
           height: '100%',
           position: 'absolute',
           backgroundColor: 'var(--mid-gray)',

@@ -52,14 +52,15 @@
 [data-theme] {
   background-color: var(--primary-bg);
   color: var(--primary-text);
-  width: 100vw;
+
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 body {
   margin: 0;
-  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {

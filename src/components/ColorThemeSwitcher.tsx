@@ -9,7 +9,7 @@ export default function ColorThemeSwitcher({ toggleTheme }: { toggleTheme: () =>
   const filter = theme === 'light' ? 'var(--filter-gray)' : 'var(--filter-yellow)';
 
   return (
-    <div style={{ padding: '2rem 0', marginTop: '-0.5rem' }}>
+    <div style={{ padding: '2rem 0 0 2rem' }}>
       <input
         type="image"
         className="icon"
