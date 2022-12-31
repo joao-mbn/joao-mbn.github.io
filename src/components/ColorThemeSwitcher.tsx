@@ -6,7 +6,7 @@ export default function ColorThemeSwitcher({ toggleTheme }: { toggleTheme: () =>
   const { theme } = useContext(AppContext);
 
   const icon = theme === 'light' ? 'moon' : 'sun';
-  const filter = theme === 'light' ? 'var(--filter-gray)' : 'var(--filter-yellow)';
+  const filter = theme === 'light' ? 'var(--mid-gray-filter)' : 'var(--filter-yellow)';
 
   return (
     <div style={{ padding: '2rem 0 0 2rem' }}>

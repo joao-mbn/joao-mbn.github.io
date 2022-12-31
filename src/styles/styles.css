@@ -1,37 +1,37 @@
 [data-theme="light"] {
   --primary-text: #222222;
   --primary-bg: #eeeeee;
+  --mid-gray: #aaaaaa;
 
-  --accent-1: #3000ff;
+  --accent-1: #3055ff;
 
   /* Use this to reproduce the colors in svgs using the "filter" property.
-   * See: https://codepen.io/sosuke/pen/Pjoqqp?editors=1111
-   */
-  --primary-bg-filter: invert(100%) sepia(2%) saturate(256%) hue-rotate(187deg) brightness(117%) contrast(87%);
+  * See: https://codepen.io/sosuke/pen/Pjoqqp?editors=1111
+  */
   --primary-text-filter: invert(13%) sepia(96%) saturate(0%) hue-rotate(239deg) brightness(100%) contrast(106%);
-  --accent-filter-1: invert(13%) sepia(100%) saturate(7388%) hue-rotate(255deg) brightness(104%) contrast(150%);
+  --mid-gray-filter: invert(81%) sepia(10%) saturate(0%) hue-rotate(149deg) brightness(85%) contrast(82%);
+  --accent-filter-1: invert(27%) sepia(85%) saturate(4238%) hue-rotate(228deg) brightness(101%) contrast(101%);
 }
 
 [data-theme="dark"] {
   --primary-text: #eeeeee;
   --primary-bg: #222222;
+  --mid-gray: #777777;
+  --mid-gray-filter: invert(33%) sepia(0%) saturate(708%) hue-rotate(249deg) brightness(94%) contrast(87%);
 
-  --accent-1: #30ffff;
+  --accent-1: #30ccff;
 
   /* Use this to reproduce the colors in svgs using the "filter" property.
    * See: https://codepen.io/sosuke/pen/Pjoqqp?editors=1111
    */
-  --primary-bg-filter: invert(13%) sepia(96%) saturate(0%) hue-rotate(239deg) brightness(100%) contrast(106%);
   --primary-text-filter: invert(100%) sepia(2%) saturate(256%) hue-rotate(187deg) brightness(117%) contrast(87%);
-  --accent-filter-1: invert(85%) sepia(70%) saturate(2250%) hue-rotate(132deg) brightness(104%) contrast(105%);
+  --accent-filter-1: invert(61%) sepia(93%) saturate(996%) hue-rotate(163deg) brightness(102%) contrast(102%);
 }
 
 :root {
-  --mid-gray: #777777;
 
   --filter-black: brightness(0) saturate(100%);
   --filter-yellow: invert(92%) sepia(32%) saturate(1055%) hue-rotate(356deg) brightness(115%) contrast(107%);
-  --filter-gray: invert(33%) sepia(0%) saturate(708%) hue-rotate(249deg) brightness(94%) contrast(87%);
 
   --light: 300;
   --normal: 400;
