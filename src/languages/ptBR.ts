@@ -13,7 +13,7 @@ export const PT_BR = {
   FOUNDER: 'Fundador',
   GERMAN: 'Alemão',
   IFRJ: 'Instituto Federal de Educação, Ciência e Tecnologia do Rio de Janeiro',
-  JUNIOR_FULLSTACK_DEVELOPER: 'Desenvolvedor Fullstack Júnior',
+  FULL_STACK_DEVELOPER: 'Desenvolvedor Full Stack',
   LANGUAGES: 'Idiomas',
   MOTHER_LANGUAGE: 'Língua materna',
   NUMERICAL_ANALYSIS: 'Métodos Numéricos',

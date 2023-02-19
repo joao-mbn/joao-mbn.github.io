@@ -12,7 +12,7 @@ export const EN_US = {
   FOUNDER: 'Founder',
   GERMAN: 'German',
   IFRJ: 'Federal Institute of Education, Science and Technology of Rio de Janeiro',
-  JUNIOR_FULLSTACK_DEVELOPER: 'Junior Fullstack Developer',
+  FULL_STACK_DEVELOPER: 'Full Stack Developer',
   LANGUAGES: 'Languages',
   MOTHER_LANGUAGE: 'Mother language',
   NUMERICAL_ANALYSIS: 'Numerical Analysis',

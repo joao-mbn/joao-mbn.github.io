@@ -14,7 +14,7 @@ export default function Header() {
           gap: '1rem',
         }}>
         <h1>joão nascimento</h1>
-        <h2>{TRANSLATION.JUNIOR_FULLSTACK_DEVELOPER}</h2>
+        <h2>{TRANSLATION.FULL_STACK_DEVELOPER}</h2>
       </div>
     </header>
   );

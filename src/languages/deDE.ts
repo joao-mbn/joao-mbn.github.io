@@ -12,7 +12,7 @@ export const DE_DE = {
   FOUNDER: 'Gründer',
   GERMAN: 'Deutsch',
   IFRJ: 'Bundesinstitut für Bildung, Wissenschaft und Technologie von Rio de Janeiro',
-  JUNIOR_FULLSTACK_DEVELOPER: 'Junior Fullstack Entwickler',
+  FULL_STACK_DEVELOPER: 'Full Stack Entwickler',
   LANGUAGES: 'Sprachen',
   MOTHER_LANGUAGE: 'Muttersprache',
   NUMERICAL_ANALYSIS: 'Numerische Mathematik',

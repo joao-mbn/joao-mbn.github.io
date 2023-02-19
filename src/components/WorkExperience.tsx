@@ -34,10 +34,7 @@ export default function WorkExperience() {
   return (
     <Section header={TRANSLATION.WORK_EXPERIENCE}>
       <div>
-        <TimeLineExperience
-          position={TRANSLATION.JUNIOR_FULLSTACK_DEVELOPER}
-          place={TRANSLATION.RADIX}
-          timespan="08/2022 -">
+        <TimeLineExperience position={TRANSLATION.FULL_STACK_DEVELOPER} place={TRANSLATION.RADIX} timespan="08/2022 -">
           {bullet(TRANSLATION.RADIX_DESCRIPTION_P1)}
           {bullet(TRANSLATION.RADIX_DESCRIPTION_P2)}
           {bullet(TRANSLATION.RADIX_DESCRIPTION_P3)}
