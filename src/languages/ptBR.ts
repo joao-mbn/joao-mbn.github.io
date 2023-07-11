@@ -1,4 +1,4 @@
-export const PT_BR = {
+const PT_BR = {
   CETEM_DESCRIPTION_P1: 'Desenvolvi um algoritmo em Python para a separação de elementos de terras-raras.',
   CETEM_DESCRIPTION_P2: 'Ganhei o prêmio de "Destaque em Iniciação Científica/Tecnológica" dois anos consecutivos.',
   CETEM: 'CETEM (Centro de Tecnologia Mineral)',
@@ -36,3 +36,6 @@ export const PT_BR = {
   VERSIONING: 'Versionamento',
   WORK_EXPERIENCE: 'Experiência',
 };
+
+export default PT_BR;
+console.log('pt br was downloaded');

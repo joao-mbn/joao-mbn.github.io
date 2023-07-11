@@ -1,4 +1,4 @@
-export const EN_US = {
+const EN_US = {
   CETEM_DESCRIPTION_P1: 'Developed a Python-based algorithm for rare-earth elements separation.',
   CETEM_DESCRIPTION_P2: 'Won the Institution\'s "Best Undergraduate Research Award" for two years consecutively.',
   CETEM: 'CETEM (Center for Mineral Technologies)',
@@ -35,3 +35,7 @@ export const EN_US = {
   VERSIONING: 'Versioning',
   WORK_EXPERIENCE: 'Work Experience',
 };
+
+export default EN_US;
+export type TranslationType = typeof EN_US;
+console.log('en us was downloaded');

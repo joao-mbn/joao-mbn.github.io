@@ -1,4 +1,4 @@
-export const DE_DE = {
+const DE_DE = {
   CETEM_DESCRIPTION_P1: `Entwicklung von einem Python-basierten Algorithmus für die Trennung der Metalle der Seltenen Erde.`,
   CETEM_DESCRIPTION_P2: `Gewinn der Preis für die "Beste Studentischer Forscher Arbeit" der Institution in zwei konsekutiven Jahren.`,
   CETEM: 'CETEM (Zentrum für Mineraltechnologien)',
@@ -35,3 +35,6 @@ export const DE_DE = {
   VERSIONING: 'Versionierung',
   WORK_EXPERIENCE: 'Berufserfahrung',
 };
+
+export default DE_DE;
+console.log('de de was downloaded');
