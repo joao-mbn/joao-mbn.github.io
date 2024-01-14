@@ -4,7 +4,7 @@ export default function Home() {
       <h1>About me</h1>
       <section>
         <p>
-          Hello there! I&apos;m João, a natural problem solver and Devil&apos;s Advocate with {getAge()} years of
+          Hello there! I&apos;m João, a natural problem solver and Devil&apos;s Advocate with {getMyAge()} years of
           experience.
         </p>
         <p>
@@ -79,7 +79,7 @@ export default function Home() {
   );
 }
 
-function getAge() {
+function getMyAge() {
   const today = new Date();
   const birthDate = new Date(1997, 1, 17);
 
@@ -93,3 +93,4 @@ function getAge() {
     return yearDifference;
   }
 }
+
