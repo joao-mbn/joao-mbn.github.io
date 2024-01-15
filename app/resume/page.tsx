@@ -7,10 +7,13 @@ export default function Resume() {
 
   return (
     <main>
-      <h2>
-        Full stack developer with {years} years and {months} {months === 1 ? 'month' : 'months'} of experience in web
-        development.
-      </h2>
+      <hgroup>
+        <h1>João Nascimento</h1>
+        <p>
+          Full stack developer with {years} years and {months} {months === 1 ? 'month' : 'months'} of experience in web
+          development.
+        </p>
+      </hgroup>
 
       <nav>
         <ul>

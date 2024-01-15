@@ -1,3 +1,3 @@
 export function Footer() {
-  return <footer>DFTBA</footer>;
+  return <footer>Made with ❤️ by João</footer>;
 }
