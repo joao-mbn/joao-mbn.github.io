@@ -1,32 +1,8 @@
-import { ExternalLink } from '../components';
+import { ExternalLink, Page } from '../components';
 
 export default function Projects() {
   return (
-    <main>
-      <section>
-        <section>
-          <h3>Holydays</h3>
-          <p></p>
-        </section>
-        <section>
-          <h3>Mari</h3>
-          <p></p>
-        </section>
-        <section>
-          <h3>
-            <ExternalLink href="https://github.com/joao-mbn/etr-optimization">REE Optimizations</ExternalLink>
-          </h3>
-          <p>
-            The algorithm for rare-earth elements separation process optimization used in my{' '}
-            <a download="Thesis.pdf" href="/TCC - João Nascimento.pdf">
-              thesis (in portuguese)
-            </a>
-            . The algorithm aimed to minimize the cost of separation of Rare earth Elements (REE) from one another, by
-            using experimental data to define the most important process variables and which combination of those were
-            more likely to yield a lower cost under certain boundaries.
-          </p>
-        </section>
-      </section>
+    <Page>
       <section>
         <h2>Open Source Contributions</h2>
         <section>
@@ -42,6 +18,32 @@ export default function Projects() {
           </p>
         </section>
       </section>
-    </main>
+      <section>
+        <h2>Personal Projects</h2>
+        <section>
+          <h3>
+            <ExternalLink href="https://github.com/joao-mbn/etr-optimization">REE Optimizations</ExternalLink>
+          </h3>
+          <p>
+            The algorithm for rare-earth elements separation process optimization used in my{' '}
+            <a download="Thesis.pdf" href="/TCC - João Nascimento.pdf">
+              thesis (in portuguese)
+            </a>
+            . The algorithm aimed to minimize the cost of separation of Rare earth Elements (REE) from one another, by
+            using experimental data to define the most important process variables and which combination of those were
+            more likely to yield a lower cost under certain boundaries.
+          </p>
+        </section>
+        <section>
+          <h3>
+            <ExternalLink href="https://get-holydays.vercel.app/">Holydays</ExternalLink>
+          </h3>
+          <p>
+            A website that will help you strategically plan your vacations to combo with weekends and holidays. See the
+            project at <ExternalLink href="https://github.com/joao-mbn/holydays">Github</ExternalLink>
+          </p>
+        </section>
+      </section>
+    </Page>
   );
 }
