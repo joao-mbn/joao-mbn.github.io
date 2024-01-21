@@ -1,12 +1,11 @@
-import { ExternalLink } from '../components';
+import { ExternalLink, Page } from '../components';
+import { EMAIL, GITHUB, LINKEDIN, PHONE } from '../utils/constants';
 
 export default function Resume() {
-  const email = 'joaombn97@gmail.com';
-  const phone = '+55 (21) 99350-4046';
   const { years, months } = getMyWorkExperience();
 
   return (
-    <main>
+    <Page>
       <hgroup>
         <h1>João Nascimento</h1>
         <p>
@@ -18,16 +17,16 @@ export default function Resume() {
       <nav>
         <ul>
           <li>
-            <ExternalLink href={`mailto:${email}`}>{email}</ExternalLink>
+            <ExternalLink href={`mailto:${EMAIL}`}>{EMAIL}</ExternalLink>
           </li>
           <li>
-            <ExternalLink href={`tel:${phone.replace(/(\(| |\)|-)/g, '')}`}>{phone}</ExternalLink>
+            <ExternalLink href={`tel:${PHONE.replace(/(\(| |\)|-)/g, '')}`}>{PHONE}</ExternalLink>
           </li>
           <li>
-            <ExternalLink href="https://github.com/joao-mbn">Github 🔗</ExternalLink>
+            <ExternalLink href={GITHUB}>Github 🔗</ExternalLink>
           </li>
           <li>
-            <ExternalLink href="https://linkedin.com/in/joaomarcosbatistanascimento">Linkedin 🔗</ExternalLink>
+            <ExternalLink href={LINKEDIN}>Linkedin 🔗</ExternalLink>
           </li>
         </ul>
       </nav>
@@ -124,7 +123,7 @@ export default function Resume() {
           </li>
         </ul>
       </section>
-    </main>
+    </Page>
   );
 }
 

@@ -1,6 +1,8 @@
+import { Page } from './components';
+
 export default function Home() {
   return (
-    <main>
+    <Page>
       <h1>About me</h1>
       <section>
         <p>
@@ -75,7 +77,7 @@ export default function Home() {
           podcast or heavy metal.
         </p>
       </section>
-    </main>
+    </Page>
   );
 }
 
