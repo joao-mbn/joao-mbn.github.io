@@ -1,14 +1,16 @@
-import { GITHUB, LINKEDIN } from '@/app/utils/constants';
-import { ExternalLink, NavMenu } from '..';
+import { LinkedinLink, NavMenu, NavMenuProps } from '..';
+import { GithubLink } from '../Links/GithubLink';
 
-export function Links() {
+export interface LinksProps extends Omit<NavMenuProps, 'children'> {}
+
+export function Links(props: LinksProps) {
   return (
-    <NavMenu>
+    <NavMenu {...props}>
       <li>
-        <ExternalLink href={GITHUB}>Github 🔗</ExternalLink>
+        <GithubLink />
       </li>
       <li>
-        <ExternalLink href={LINKEDIN}>Linkedin 🔗</ExternalLink>
+        <LinkedinLink />
       </li>
     </NavMenu>
   );

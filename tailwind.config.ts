@@ -15,6 +15,12 @@ const config: Config = {
       strokeWidth: {
         '10': '10px',
       },
+      screens: {
+        tiny: '380px',
+      },
+      translate: {
+        '0.5': '0.125rem',
+      },
     },
   },
   plugins: [],

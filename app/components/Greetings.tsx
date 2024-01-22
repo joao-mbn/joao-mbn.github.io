@@ -5,10 +5,10 @@ import { getMyAge } from '../utils/datetime';
 export function Greetings() {
   return (
     <>
-      <section className="flex items-center flex-col-reverse sm:flex-row mx-auto items-start gap-2">
+      <section className="flex items-center flex-col-reverse sm:flex-row mx-auto gap-2">
         <svg
           viewBox="-10 0 200 200"
-          className="stroke-slate-500 fill-none h-80 w-80 sm:h-56 sm:w-56 md:h-80 md:w-80 lg:h-96 lg:w-96 stroke-10 overflow-visible">
+          className="stroke-slate-500 fill-none h-56 w-56 tiny:h-80 tiny:w-80 sm:h-56 sm:w-56 md:h-80 md:w-80 lg:h-96 lg:w-96 stroke-10 overflow-visible">
           <defs>
             <clipPath id="hexagon">
               <path d="M 43 25 C 87 0 87 0 130 25 C 174 50 174 50 174 100 C 174 150 174 150 130 175 C 87 200 87 200 43 175 C 0 150 0 150 0 100 C 0 50 0 50 43 25" />
@@ -18,7 +18,7 @@ export function Greetings() {
           <image className="w-[175px] h-[235px]" xlinkHref="/me.jpg" clipPath="url(#hexagon)" />
         </svg>
         <div className="flex flex-col" style={{ flexBasis: 'fit-content' }}>
-          <Paragraph>Hello there ✌️!</Paragraph>
+          <h1 className="text-bold text-3xl lg:text-6xl pb-2 lg:pb-5">Hello there! ✌️</h1>
           <Paragraph>
             I&apos;m João, a natural problem solver and Devil&apos;s Advocate with {getMyAge()} years of experience.
           </Paragraph>
