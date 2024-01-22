@@ -13,8 +13,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className + ' min-h-dvh w-dvw text-lg lg:text-xl'}>
-        <div className="mx-auto flex flex-col lg:max-w-[1024px] w-full h-full gap-10 lg:gap-20 mt-10 lg:mt-20 px-4">
+      <body
+        className={
+          inter.className +
+          ' min-h-dvh w-dvw text-lg lg:text-xl fill-slate-800 stroke-slate-800 text-slate-800 bg-slate-50'
+        }>
+        <div className="mx-auto flex flex-col lg:max-w-[1024px] w-full h-full gap-10 lg:gap-20 mt-10 mb-5 lg:mt-20 lg:mb-10 px-4">
           <Header />
           {children}
           <Footer />

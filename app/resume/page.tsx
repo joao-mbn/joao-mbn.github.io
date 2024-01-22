@@ -1,5 +1,6 @@
 import { ExternalLink, Page } from '../components';
 import { EMAIL, GITHUB, LINKEDIN, PHONE } from '../utils/constants';
+import { getMyWorkExperience } from '../utils/datetime';
 
 export default function Resume() {
   const { years, months } = getMyWorkExperience();
@@ -125,20 +126,4 @@ export default function Resume() {
       </section>
     </Page>
   );
-}
-
-function getMyWorkExperience() {
-  const today = new Date();
-  const internshipStartDate = new Date(2021, 4, 10);
-
-  const yearDifference = today.getFullYear() - internshipStartDate.getFullYear();
-  const monthDifference = today.getMonth() - internshipStartDate.getMonth();
-  const dayDifference = today.getDate() - internshipStartDate.getDate();
-
-  if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
-    const monthsInPreviousYear = 12;
-    return { years: yearDifference - 1, months: monthsInPreviousYear + monthDifference };
-  } else {
-    return { years: yearDifference, months: monthDifference };
-  }
 }
