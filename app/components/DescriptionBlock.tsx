@@ -1,4 +1,5 @@
 import { ComponentPropsWithoutRef, ReactNode } from 'react';
+import { Paragraph } from '.';
 import { RoundedHexagon, RoundedHexagonProps } from './RoundedHexagon';
 
 interface DescriptionBlockProps<T extends 'h1' | 'h2' | 'h3' | 'h4'>
@@ -46,5 +47,16 @@ export function DescriptionWithImage({
       <RoundedHexagon {...imageContainerProps}>{image}</RoundedHexagon>
       {children}
     </section>
+  );
+}
+
+export interface DescriptionItemProps extends ComponentPropsWithoutRef<'li'> {}
+
+export function DescriptionItem({ children, ...props }: DescriptionItemProps) {
+  return (
+    <li className="mb-4 flex gap-4" {...props}>
+      <div className="bullet h-4 w-4 flex-shrink-0 translate-y-2 bg-slate-800" />
+      <Paragraph className="mb-0">{children}</Paragraph>
+    </li>
   );
 }

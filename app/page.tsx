@@ -1,9 +1,28 @@
-import { DescriptionBlock, Greetings, Page, Paragraph } from './components';
+import { DescriptionBlock, DescriptionWithImage, ExternalLink, Page, Paragraph } from './components';
+import { EMAIL } from './utils/constants';
+import { getMyAge } from './utils/datetime';
 
 export default function Home() {
   return (
     <Page>
-      <Greetings />
+      <DescriptionWithImage
+        imageContainerProps={{ id: 'greetings' }}
+        image={<image className="h-[115px] w-[100px]" xlinkHref="/me.jpg" clipPath="url(#greetings)" />}>
+        <div className="flex flex-col">
+          <h1 className="text-biggest">Hello there! ✌️</h1>
+          <Paragraph>
+            I&apos;m João, a natural problem solver and Devil&apos;s Advocate with {getMyAge()} years of experience.
+          </Paragraph>
+          <Paragraph>
+            My most relevant ability is that I tend to learn new stuff fast. Come to me with some idea, proposal,
+            worldview or argument and we will be set for a good talk.{' '}
+            <ExternalLink href={`mailto:${EMAIL}`} className="text-link">
+              Send me a message
+            </ExternalLink>
+            .
+          </Paragraph>
+        </div>
+      </DescriptionWithImage>
       <DescriptionBlock title="My Professional Background" titleProps={{ className: 'font-semibold' }}>
         <Paragraph>
           In spite of having almost a decade of study and practice in the domain of chemistry and its applications,
@@ -14,7 +33,7 @@ export default function Home() {
           During the COVID pandemic, I stumbled upon the fascinating realm of programming through friends engaged in
           algorithmic trading. Recognizing the potential for enhancing my academic research in an industrial process for
           attaining pure rare earth elements, I decided to learn the basics, and not long after, I was implementing my
-          first algorithms for process optimization. The algorithm helped me achieve impressive results and was
+          first algorithms for process optimization. The algorithms helped me achieve impressive results and was
           responsible, in no small part, for granting me two consecutive yearly awards for the best undergraduate
           research in the institution I carried it. Upon further refinements, I used this algorithm for my thesis.
         </Paragraph>
@@ -51,16 +70,14 @@ export default function Home() {
           my knowledge about different corners of the globe—what they look like, who inhabits them, and the stories they
           hold. This passion naturally led me to explore various subjects, including geography, history, languages,
           evolutionary biology, economics, and politics. My interests have evolved into a hobby that continuously fuels
-          my quest for knowledge.
-        </Paragraph>
-        <Paragraph>
-          As a result, I&apos;ve cultivated a decent general understanding of these diverse fields and can navigate five
-          languages to varying extents: Portuguese, Spanish, French, German, and English.
+          my quest for knowledge. As a result, I&apos;ve cultivated a decent general understanding of these diverse
+          fields and I can comprehend five languages to varying extents: Portuguese, English, German, French, and
+          Spanish, by order of proficiency.
         </Paragraph>
         <Paragraph>
           I like to have moments throughout the day where I can leverage the diffuse mode of thinking, which is to say
           that I turn my brain off. At these times I&apos;m usually running or working out and listening to some RPG
-          podcast or heavy metal.
+          podcast or music.
         </Paragraph>
       </DescriptionBlock>
     </Page>

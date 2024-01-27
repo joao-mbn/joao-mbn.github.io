@@ -1,6 +1,5 @@
 export * from './DescriptionBlock';
 export * from './Footer';
-export * from './Greetings';
 export * from './Header/Header';
 export * from './Header/Navbar';
 export * from './Links';
