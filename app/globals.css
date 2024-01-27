@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .text-biggest {
+    @apply pb-2 text-3xl lg:pb-5 lg:text-6xl;
+  }
+  .text-very-big {
+    @apply pb-2 text-2xl lg:pb-5 lg:text-5xl;
+  }
+  .text-big {
+    @apply text-xl lg:text-2xl;
+  }
+  .text-normal {
+    @apply text-lg lg:text-xl;
+  }
+}
+

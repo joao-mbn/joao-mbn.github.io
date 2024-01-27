@@ -3,7 +3,7 @@ import { Links } from './Links';
 
 export function Header() {
   return (
-    <header className="flex align-middle justify-between flex-wrap gap-4 lg:gap-6 text-xl lg:text-2xl">
+    <header className="text-big flex flex-wrap justify-between gap-4 align-middle lg:gap-6">
       <Navbar />
       <Links className="-translate-y-0.5" />
     </header>
