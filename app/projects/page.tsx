@@ -23,6 +23,7 @@ export default function Projects() {
             </>
           }>
           <DescriptionBlock
+            samanticTitleTag="h3"
             className="mt-0"
             title={
               <ExternalLink href="https://www.npmjs.com/package/@types/hot-formula-parser">
@@ -44,6 +45,7 @@ export default function Projects() {
           className="mt-5 lg:mt-10"
           image={<image className="h-[100px] w-[97px]" xlinkHref="/ree-wallpaper.jpg" clipPath="url(#hexagon)" />}>
           <DescriptionBlock
+            samanticTitleTag="h3"
             className="mt-0"
             title={<ExternalLink href="https://github.com/joao-mbn/etr-optimization">REE Optimizations</ExternalLink>}>
             <Paragraph>
@@ -62,6 +64,7 @@ export default function Projects() {
           imageContainerProps={{ id: 'holydays' }}
           image={<image className="h-[100px] w-[100px]" xlinkHref="/holydays.png" clipPath="url(#holydays)" />}>
           <DescriptionBlock
+            samanticTitleTag="h3"
             className="mt-0"
             title={<ExternalLink href="https://get-holydays.vercel.app/">Holydays</ExternalLink>}>
             <Paragraph>

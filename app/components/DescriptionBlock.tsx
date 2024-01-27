@@ -1,22 +1,27 @@
 import { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { RoundedHexagon, RoundedHexagonProps } from './RoundedHexagon';
 
-interface DescriptionBlockProps extends Omit<ComponentPropsWithoutRef<'section'>, 'title'> {
+interface DescriptionBlockProps<T extends 'h1' | 'h2' | 'h3' | 'h4'>
+  extends Omit<ComponentPropsWithoutRef<'section'>, 'title'> {
   title: ReactNode;
-  titleProps?: ComponentPropsWithoutRef<'h2'>;
+  samanticTitleTag?: T;
+  titleProps?: ComponentPropsWithoutRef<T>;
 }
 
-export function DescriptionBlock({
+export function DescriptionBlock<T extends 'h1' | 'h2' | 'h3' | 'h4'>({
   title,
   children,
-  titleProps: { className: titleClassName, ...otherTitleProps } = {},
+  samanticTitleTag,
+  titleProps: { className: titleClassName, ...otherTitleProps } = {} as ComponentPropsWithoutRef<T>,
   ...props
-}: DescriptionBlockProps) {
+}: DescriptionBlockProps<T>) {
+  const Title = samanticTitleTag ?? 'h2';
+
   return (
     <section className="mt-5 lg:mt-10" {...props}>
-      <h2 className={'text-very-big ' + titleClassName} {...otherTitleProps}>
+      <Title className={'text-very-big ' + titleClassName} {...otherTitleProps}>
         {title}
-      </h2>
+      </Title>
       {children}
     </section>
   );
