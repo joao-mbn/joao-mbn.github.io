@@ -8,7 +8,7 @@ export function RoundedHexagon({ children, id, ...props }: RoundedHexagonProps) 
   return (
     <svg
       viewBox="0 0 100 100"
-      className="h-56 w-56 overflow-visible fill-none stroke-slate-500 stroke-2 tiny:h-80 tiny:w-80 sm:h-56 sm:w-56 md:h-80 md:w-80 lg:h-96 lg:w-96"
+      className="h-56 w-56 overflow-visible fill-none stroke-slate-800 stroke-2 tiny:h-80 tiny:w-80 sm:h-56 sm:w-56 md:h-80 md:w-80 lg:h-96 lg:w-96"
       {...props}>
       <defs>
         <clipPath id={id ?? 'hexagon'}>

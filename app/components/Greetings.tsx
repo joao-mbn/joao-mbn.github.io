@@ -14,8 +14,11 @@ export function Greetings() {
         </Paragraph>
         <Paragraph>
           My most relevant ability is that I tend to learn new stuff fast. Come to me with some idea, proposal,
-          worldview or argument and we will be set for a good talk.
-          <ExternalLink href={`mailto:${EMAIL}`}>Send me a message.</ExternalLink>
+          worldview or argument and we will be set for a good talk.{' '}
+          <ExternalLink href={`mailto:${EMAIL}`} className="text-link">
+            Send me a message
+          </ExternalLink>
+          .
         </Paragraph>
       </div>
     </DescriptionWithImage>

@@ -8,7 +8,7 @@ interface BaseLinkIcon extends ComponentPropsWithoutRef<'svg'> {
 export function BaseLinkIcon({ link, children, className, ...props }: BaseLinkIcon) {
   return (
     <ExternalLink href={link}>
-      <svg className={'h-8 w-8 lg:h-10 lg:w-10 stroke-none fill-slate-800 ' + className} {...props}>
+      <svg className={'h-8 w-8 fill-slate-800 stroke-none lg:h-10 lg:w-10 ' + className} {...props}>
         {children}
       </svg>
     </ExternalLink>
