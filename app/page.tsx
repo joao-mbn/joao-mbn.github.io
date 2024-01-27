@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <Page>
       <Greetings />
-      <DescriptionBlock title="My Professional Background">
+      <DescriptionBlock title="My Professional Background" titleProps={{ className: 'font-semibold' }}>
         <Paragraph>
           In spite of having almost a decade of study and practice in the domain of chemistry and its applications,
           holding a bachelor&apos;s degree in chemical engineering and a technician degree in chemistry, I work as a
@@ -24,7 +24,7 @@ export default function Home() {
           securing a full-time position as a full-stack developer within a year and a half.
         </Paragraph>
       </DescriptionBlock>
-      <DescriptionBlock title="Life Goals">
+      <DescriptionBlock title="Life Goals" titleProps={{ className: 'font-semibold' }}>
         <Paragraph>
           The world even though arguably better than ever, it has nonetheless far too many problems for me to think that
           just doing my part will be sufficient. And some problems have or will have taken such proportions as to
@@ -44,7 +44,7 @@ export default function Home() {
           purpose to my life.
         </Paragraph>
       </DescriptionBlock>
-      <DescriptionBlock title="Hobbies">
+      <DescriptionBlock title="Hobbies" titleProps={{ className: 'font-semibold' }}>
         <Paragraph>
           Before chemistry and programming took the center stage, my childhood fascination with maps and flags sparked a
           lifelong interest in understanding places and people. This curiosity manifested in a habit of filling gaps in
