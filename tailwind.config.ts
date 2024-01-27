@@ -13,6 +13,7 @@ const config: Config = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       strokeWidth: {
+        '5': '5px',
         '10': '10px',
       },
       screens: {

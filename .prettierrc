@@ -10,5 +10,6 @@
   "bracketSameLine": true,
   "arrowParens": "avoid",
   "endOfLine": "crlf",
-  "singleAttributePerLine": false
+  "singleAttributePerLine": false,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
