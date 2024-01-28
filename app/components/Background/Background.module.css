@@ -1,0 +1,68 @@
+@property --gradient-1 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: theme(colors.slate.100);
+}
+@property --gradient-2 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: theme(colors.slate.200);
+}
+@property --gradient-3 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: theme(colors.slate.300);
+}
+
+@keyframes color-animation {
+  0% {
+    --gradient-1: theme(colors.slate.100);
+    --gradient-2: theme(colors.slate.200);
+    --gradient-3: theme(colors.slate.300);
+  }
+  25% {
+    --gradient-1: theme(colors.slate.200);
+    --gradient-2: theme(colors.slate.300);
+    --gradient-3: theme(colors.slate.200);
+  }
+  50% {
+    --gradient-1: theme(colors.slate.300);
+    --gradient-2: theme(colors.slate.200);
+    --gradient-3: theme(colors.slate.100);
+  }
+  75% {
+    --gradient-1: theme(colors.slate.200);
+    --gradient-2: theme(colors.slate.100);
+    --gradient-3: theme(colors.slate.200);
+  }
+  100% {
+    --gradient-1: theme(colors.slate.100);
+    --gradient-2: theme(colors.slate.200);
+    --gradient-3: theme(colors.slate.300);
+  }
+}
+
+.backgroundHexagons {
+  mask-image: url('/background.svg');
+  animation: color-animation 10s ease-in infinite;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-1),
+    var(--gradient-2),
+    var(--gradient-3),
+    var(--gradient-2),
+    var(--gradient-1)
+  );
+}
+
+.background {
+  background-image: linear-gradient(
+    135deg,
+    var(--gradient-3),
+    var(--gradient-2),
+    var(--gradient-1),
+    var(--gradient-2),
+    var(--gradient-3)
+  );
+  animation: color-animation 10s ease-in infinite;
+}

@@ -1,3 +1,4 @@
+export * from './Background/Background';
 export * from './DescriptionBlock';
 export * from './Footer';
 export * from './Header/Header';
