@@ -4,9 +4,9 @@ export interface ParagraphProps extends ComponentPropsWithoutRef<'p'> {
   children: ReactNode;
 }
 
-export function Paragraph({ children, ...props }: ParagraphProps) {
+export function Paragraph({ children, className, ...props }: ParagraphProps) {
   return (
-    <p className="mb-4" {...props}>
+    <p className={'mb-4 lg:text-justify ' + className} {...props}>
       {children}
     </p>
   );
