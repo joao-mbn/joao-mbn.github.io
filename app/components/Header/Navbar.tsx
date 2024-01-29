@@ -20,8 +20,8 @@ export function Navbar() {
           <Link
             href={path}
             className={
-              'rounded-sm p-2 underline-offset-4 transition-all duration-300 lg:p-3 lg:underline-offset-8 ' +
-              (path === activePath ? 'bg-slate-800 text-slate-50' : 'text-link')
+              'p-2 underline-offset-4 transition-all duration-300 lg:p-3 lg:underline-offset-8 ' +
+              (path === activePath ? 'dark-bg-gradient' : 'text-link')
             }>
             {value}
           </Link>
