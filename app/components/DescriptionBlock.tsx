@@ -55,7 +55,7 @@ export interface DescriptionItemProps extends ComponentPropsWithoutRef<'li'> {}
 export function DescriptionItem({ children, ...props }: DescriptionItemProps) {
   return (
     <li className="mb-4 flex gap-4" {...props}>
-      <div className="bullet h-4 w-4 flex-shrink-0 translate-y-2 bg-slate-800" />
+      <div className="bullet dark-bg-gradient h-4 w-4 flex-shrink-0 translate-y-2" />
       <Paragraph className="mb-0">{children}</Paragraph>
     </li>
   );
