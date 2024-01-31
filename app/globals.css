@@ -22,6 +22,6 @@
     @apply hover:dark-bg-gradient underline underline-offset-4 transition-all duration-300;
   }
   .bullet {
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: path('M8.048 0 14.976 4 14.976 12 8.048 16 1.12 12V4L8.048 0Z');
   }
 }
