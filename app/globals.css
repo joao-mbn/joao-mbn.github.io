@@ -16,7 +16,7 @@
     @apply text-lg lg:text-xl;
   }
   .dark-bg-gradient {
-    @apply bg-gradient-to-tr from-slate-700 from-40% to-slate-800 to-80% text-slate-50 no-underline;
+    @apply bg-gradient-to-tr from-slate-600 to-slate-900 to-50% text-slate-50 no-underline;
   }
   .text-link {
     @apply hover:dark-bg-gradient underline underline-offset-4 transition-all duration-300;
