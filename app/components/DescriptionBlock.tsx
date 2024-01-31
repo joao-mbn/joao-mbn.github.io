@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { Paragraph } from '.';
-import { RoundedHexagon, RoundedHexagonProps } from './RoundedHexagon';
+import { HexagonContainer, HexagonContainerProps } from './HexagonCointainer';
 
 interface DescriptionBlockProps<T extends 'h1' | 'h2' | 'h3' | 'h4'>
   extends Omit<ComponentPropsWithoutRef<'section'>, 'title'> {
@@ -30,7 +30,7 @@ export function DescriptionBlock<T extends 'h1' | 'h2' | 'h3' | 'h4'>({
 
 interface DescriptionWithImageProps extends ComponentPropsWithoutRef<'section'> {
   image: ReactNode;
-  imageContainerProps?: RoundedHexagonProps;
+  imageContainerProps?: HexagonContainerProps;
 }
 
 export function DescriptionWithImage({
@@ -44,7 +44,7 @@ export function DescriptionWithImage({
     <section
       className={'mx-auto flex flex-col-reverse items-center gap-2 sm:flex-row sm:items-start ' + className}
       {...props}>
-      <RoundedHexagon {...imageContainerProps}>{image}</RoundedHexagon>
+      <HexagonContainer {...imageContainerProps}>{image}</HexagonContainer>
       {children}
     </section>
   );

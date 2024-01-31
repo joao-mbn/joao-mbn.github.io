@@ -43,7 +43,7 @@
 }
 
 .backgroundHexagons {
-  mask-image: url('/background.svg');
+  mask-image: url('/background-pattern.svg');
   animation: color-animation 10s ease-in infinite;
   background: linear-gradient(
     135deg,

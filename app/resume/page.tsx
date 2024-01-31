@@ -57,7 +57,7 @@ export default function Resume() {
               <DescriptionItem>
                 Learned web development technologies from scratch during the internship, earning recognition for
                 resolving issues and bugs swiftly. Completed the internship six months ahead of schedule, securing a
-                full-time Developer II, bypassing the typical entry-level position of Developer I.
+                full-time position as Developer II, bypassing the typical entry-level position of Developer I.
               </DescriptionItem>
             </ul>
           </DescriptionBlock>

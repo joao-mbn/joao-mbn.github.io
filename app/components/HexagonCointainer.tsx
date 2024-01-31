@@ -1,10 +1,10 @@
 import { ComponentPropsWithoutRef } from 'react';
 
-export interface RoundedHexagonProps extends ComponentPropsWithoutRef<'svg'> {
+export interface HexagonContainerProps extends ComponentPropsWithoutRef<'svg'> {
   id?: string;
 }
 
-export function RoundedHexagon({ children, id, ...props }: RoundedHexagonProps) {
+export function HexagonContainer({ children, id, ...props }: HexagonContainerProps) {
   return (
     <svg
       viewBox="0 0 100 100"
