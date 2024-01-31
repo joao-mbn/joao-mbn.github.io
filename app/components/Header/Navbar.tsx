@@ -17,12 +17,7 @@ export function Navbar() {
     <NavMenu>
       {routes.map(({ path, value }) => (
         <li key={path}>
-          <Link
-            href={path}
-            className={
-              'p-2 underline-offset-4 transition-all duration-300 lg:p-3 lg:underline-offset-8 ' +
-              (path === activePath ? 'dark-bg-gradient' : 'text-link')
-            }>
+          <Link href={path} className={'p-2 lg:p-3 ' + (path === activePath ? 'text-link-active' : 'text-link')}>
             {value}
           </Link>
         </li>

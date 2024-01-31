@@ -15,12 +15,25 @@
   .text-normal {
     @apply text-lg lg:text-xl;
   }
+
   .dark-bg-gradient {
-    @apply bg-gradient-to-tr from-slate-600 to-slate-900 to-50% text-slate-50 no-underline;
+    @apply bg-gradient-to-tr from-slate-600 to-slate-900 to-50% text-slate-50;
   }
+
   .text-link {
-    @apply hover:dark-bg-gradient underline underline-offset-4 transition-all duration-300;
+    @apply pb-1;
+    transition-property: color, background-size;
+    transition-timing-function: ease-out;
+    transition-duration: 300ms, 150ms;
   }
+  .text-link:hover,
+  .text-link-active {
+    @apply dark-bg-gradient bg-full;
+  }
+  .text-link:not(:hover) {
+    @apply dark-bg-gradient bg-[length:100%_2px] bg-[0_98%] bg-no-repeat text-slate-800;
+  }
+
   .bullet {
     clip-path: path('M8.048 0 14.976 4 14.976 12 8.048 16 1.12 12V4L8.048 0Z');
   }

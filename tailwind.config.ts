@@ -22,6 +22,9 @@ const config: Config = {
       translate: {
         '0.5': '0.125rem',
       },
+      backgroundSize: {
+        full: '100% 100%',
+      },
     },
   },
   plugins: [],
