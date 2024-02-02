@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { Paragraph } from '.';
 import { HexagonImageContainer, HexagonImageContainerProps } from './HexagonCointainer';
 
-interface DescriptionBlockProps<T extends 'h1' | 'h2' | 'h3' | 'h4'>
+export interface DescriptionBlockProps<T extends 'h1' | 'h2' | 'h3' | 'h4'>
   extends Omit<ComponentPropsWithoutRef<'section'>, 'title'> {
   title: ReactNode;
   samanticTitleTag?: T;
@@ -12,14 +12,15 @@ interface DescriptionBlockProps<T extends 'h1' | 'h2' | 'h3' | 'h4'>
 export function DescriptionBlock<T extends 'h1' | 'h2' | 'h3' | 'h4'>({
   title,
   children,
+  className = '',
   samanticTitleTag,
-  titleProps: { className: titleClassName, ...otherTitleProps } = {} as ComponentPropsWithoutRef<T>,
+  titleProps: { className: titleClassName = '', ...otherTitleProps } = {} as ComponentPropsWithoutRef<T>,
   ...props
 }: DescriptionBlockProps<T>) {
   const Title = samanticTitleTag ?? 'h2';
 
   return (
-    <section className="mt-5 lg:mt-10" {...props}>
+    <section className={'mt-5 lg:mt-10 ' + className} {...props}>
       <Title className={'text-very-big ' + titleClassName} {...otherTitleProps}>
         {title}
       </Title>
@@ -54,7 +55,7 @@ export interface DescriptionItemProps extends ComponentPropsWithoutRef<'li'> {}
 
 export function DescriptionItem({ children, ...props }: DescriptionItemProps) {
   return (
-    <li className="mb-4 flex gap-4" {...props}>
+    <li className="mb-1 flex gap-4 lg:mb-2" {...props}>
       <div className="bullet dark-bg-gradient h-4 w-4 flex-shrink-0 translate-y-2" />
       <Paragraph className="mb-0">{children}</Paragraph>
     </li>

@@ -4,10 +4,10 @@
 
 @layer components {
   .text-biggest {
-    @apply pb-2 text-3xl lg:pb-5 lg:text-6xl;
+    @apply pb-2 text-3xl lg:pb-4 lg:text-4xl;
   }
   .text-very-big {
-    @apply pb-2 text-2xl lg:pb-5 lg:text-5xl;
+    @apply pb-2 text-2xl lg:pb-4 lg:text-3xl;
   }
   .text-big {
     @apply text-xl lg:text-2xl;

@@ -6,7 +6,7 @@ export default function Projects() {
     <Page>
       <DescriptionBlock
         title="Open Source Contributions"
-        className="mb-5 mt-0 flex flex-col lg:mb-10"
+        className="lg:mb-10 [&&]:mb-5 [&&]:mt-0 [&&]:flex-col"
         titleProps={{ className: 'font-semibold' }}>
         <DescriptionWithImage
           className="mt-5 lg:mt-10"
@@ -24,7 +24,7 @@ export default function Projects() {
           }>
           <DescriptionBlock
             samanticTitleTag="h3"
-            className="mt-0"
+            className="[&&]:mt-0"
             title={
               <ExternalLink href="https://www.npmjs.com/package/@types/hot-formula-parser">
                 @types/hot-formula-parser
@@ -43,10 +43,13 @@ export default function Projects() {
       <DescriptionBlock title="Personal Projects" titleProps={{ className: 'font-semibold' }}>
         <DescriptionWithImage
           className="mt-5 lg:mt-10"
-          image={<image className="h-[100px] w-[98px]" xlinkHref="/ree-wallpaper.jpg" clipPath="url(#hexagon)" />}>
+          image={
+            <image className="h-[100px] w-[98px]" xlinkHref="/ree-wallpaper.jpg" clipPath="url(#ree-optimization)" />
+          }
+          imageContainerProps={{ id: 'ree-optimization' }}>
           <DescriptionBlock
             samanticTitleTag="h3"
-            className="mt-0"
+            className="[&&]:mt-0"
             title={<ExternalLink href="https://github.com/joao-mbn/etr-optimization">REE Optimizations</ExternalLink>}>
             <Paragraph>
               The algorithm for rare-earth elements separation process optimization used in my{' '}
@@ -65,7 +68,7 @@ export default function Projects() {
           image={<image className="h-[100px] w-[102.5px]" xlinkHref="/holydays.png" clipPath="url(#holydays)" />}>
           <DescriptionBlock
             samanticTitleTag="h3"
-            className="mt-0"
+            className="[&&]:mt-0"
             title={<ExternalLink href="https://get-holydays.vercel.app/">Holydays</ExternalLink>}>
             <Paragraph>
               A website that will help you strategically plan your vacations to combo with weekends and holidays. See
