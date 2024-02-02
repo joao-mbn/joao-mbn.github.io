@@ -1,38 +1,22 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { GradientSvg, GradientSvgProps } from '.';
 
-export interface HexagonContainerProps extends ComponentPropsWithoutRef<'svg'> {
-  id?: string;
-}
+export interface HexagonImageContainerProps extends Omit<GradientSvgProps, 'gradientOn'> {}
 
-export function HexagonContainer({ children, id, ...props }: HexagonContainerProps) {
+export function HexagonImageContainer({ children, id, ...props }: HexagonImageContainerProps) {
   return (
-    <svg
-      viewBox="0 0 100 100"
-      className="h-56 w-56 overflow-visible fill-none stroke-slate-800 stroke-2 tiny:h-80 tiny:w-80 sm:h-56 sm:w-56 md:h-80 md:w-80 lg:h-96 lg:w-96"
-      {...props}>
-      <defs>
-        <clipPath id={id ?? 'hexagon'}>
+    <GradientSvg
+      extraDefs={
+        <clipPath id={id}>
           <path d="M50.3 0L93.6 25L93.6 75L50.3 100L7 75V25L50.3 0Z" />
         </clipPath>
-        <linearGradient id="gradient" x1="0" x2="1" y1="1" y2="0">
-          <stop offset="0%" className="hex-stop-1" />
-          <stop offset="50%" className="hex-stop-2" />
-        </linearGradient>
-      </defs>
-      <style>
-        {`
-          #hex-path {
-            stroke: url(#gradient);
-          }
-          .hex-stop-1 {
-            stop-color: #475569;
-          }
-          .hex-stop-2 {
-            stop-color: #0f172a;
-          }`}
-      </style>
+      }
+      viewBox="0 0 100 100"
+      gradientOn="stroke"
+      id={`path-${id}`}
+      className="h-56 w-56 overflow-visible fill-none stroke-slate-800 stroke-2 tiny:h-80 tiny:w-80 sm:h-56 sm:w-56 md:h-80 md:w-80 lg:h-96 lg:w-96"
+      {...props}>
       {children}
-      <path id="hex-path" d="M50.3 0L93.6 25L93.6 75L50.3 100L7 75V25L50.3 0Z" />
-    </svg>
+      <path id={`path-${id}`} d="M50.3 0L93.6 25L93.6 75L50.3 100L7 75V25L50.3 0Z" />
+    </GradientSvg>
   );
 }

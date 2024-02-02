@@ -8,7 +8,7 @@ export default function Home() {
       <DescriptionWithImage
         imageContainerProps={{ id: 'greetings' }}
         image={<image className="h-[115px] w-[100.5px]" xlinkHref="/me.jpg" clipPath="url(#greetings)" />}>
-        <div className="flex flex-col">
+        <section className="flex flex-col">
           <h1 className="text-biggest">Hello there!</h1>
           <Paragraph>
             I&apos;m João, a natural problem solver and Devil&apos;s Advocate with {getMyAge()} years of experience.
@@ -21,7 +21,7 @@ export default function Home() {
             </ExternalLink>
             .
           </Paragraph>
-        </div>
+        </section>
       </DescriptionWithImage>
       <DescriptionBlock title="My Professional Background" titleProps={{ className: 'font-semibold' }}>
         <Paragraph>

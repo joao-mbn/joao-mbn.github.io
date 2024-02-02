@@ -1,6 +1,7 @@
 export * from './Background/Background';
 export * from './DescriptionBlock';
 export * from './Footer';
+export * from './GradientSvg';
 export * from './Header/Header';
 export * from './Header/Navbar';
 export * from './Links';
