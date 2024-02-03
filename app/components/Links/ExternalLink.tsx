@@ -1,6 +1,6 @@
 import React, { ComponentPropsWithoutRef } from 'react';
 
-interface ExternalLinkProps extends ComponentPropsWithoutRef<'a'> {
+export interface ExternalLinkProps extends ComponentPropsWithoutRef<'a'> {
   children?: React.ReactNode;
 }
 

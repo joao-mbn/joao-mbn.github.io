@@ -1,14 +1,13 @@
-import { ExternalLink } from '.';
+import { ExternalLink, ExternalLinkProps } from '.';
 import { GradientSvg, GradientSvgProps } from '..';
 
-interface BaseLinkIcon extends GradientSvgProps {
-  link: string;
+export interface BaseLinkIcon extends GradientSvgProps, Pick<ExternalLinkProps, 'href' | 'aria-label'> {
   id: string;
 }
 
-export function BaseLinkIcon({ link, children, className, ...props }: BaseLinkIcon) {
+export function BaseLinkIcon({ href, 'aria-label': ariaLabel, children, className, ...props }: BaseLinkIcon) {
   return (
-    <ExternalLink href={link}>
+    <ExternalLink href={href} aria-label={ariaLabel}>
       <GradientSvg className={'h-10 w-10 stroke-none lg:h-12 lg:w-12 ' + className} {...props}>
         {children}
       </GradientSvg>
