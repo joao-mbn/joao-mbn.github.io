@@ -1,13 +1,18 @@
-import { DescriptionBlock, DescriptionWithImage, ExternalLink, Page, Paragraph } from './components';
+import { DescriptionBlock, ExternalLink, HexagonImageContainer, Page, Paragraph } from './components';
 import { EMAIL } from './utils/constants';
 import { getMyAge } from './utils/datetime';
 
 export default function Home() {
   return (
     <Page>
-      <DescriptionWithImage
-        imageContainerProps={{ id: 'greetings' }}
-        image={<image className="h-[110px] w-[110x] grayscale" xlinkHref="/me.webp" clipPath="url(#greetings)" />}>
+      <section className="mx-auto flex flex-col-reverse items-center gap-2 sm:flex-row sm:items-start">
+        <HexagonImageContainer id="greetings">
+          <image
+            className="h-[110px] w-[110x] grayscale transition-all duration-300 hover:grayscale-0"
+            xlinkHref="/me.webp"
+            clipPath="url(#greetings)"
+          />
+        </HexagonImageContainer>
         <section className="flex flex-col">
           <h1 className="text-biggest">Hello there!</h1>
           <Paragraph>
@@ -19,7 +24,7 @@ export default function Home() {
             <ExternalLink href={`mailto:${EMAIL}`}>Send me a message</ExternalLink>.
           </Paragraph>
         </section>
-      </DescriptionWithImage>
+      </section>
       <DescriptionBlock title="My Professional Background" titleProps={{ className: 'font-semibold' }}>
         <Paragraph>
           In spite of having almost a decade of study and practice in the domain of chemistry and its applications,
