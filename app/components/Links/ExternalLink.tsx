@@ -6,7 +6,7 @@ interface ExternalLinkProps extends ComponentPropsWithoutRef<'a'> {
 
 export function ExternalLink({ children, ...props }: ExternalLinkProps) {
   return (
-    <a target="_blank" rel="noreferrer" {...props}>
+    <a target="_blank" rel="noreferrer" className="text-link" {...props}>
       {children}
     </a>
   );
