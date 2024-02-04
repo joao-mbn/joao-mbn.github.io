@@ -5,10 +5,10 @@ export interface BaseLinkIcon extends GradientSvgProps, Pick<ExternalLinkProps, 
   id: string;
 }
 
-export function BaseLinkIcon({ href, 'aria-label': ariaLabel, children, className, ...props }: BaseLinkIcon) {
+export function BaseLinkIcon({ href, 'aria-label': ariaLabel, children, className = '', ...props }: BaseLinkIcon) {
   return (
     <ExternalLink href={href} aria-label={ariaLabel}>
-      <GradientSvg className={'h-10 w-10 stroke-none lg:h-12 lg:w-12 ' + className} {...props}>
+      <GradientSvg className={'h-10 w-10 lg:h-12 lg:w-12 ' + className ?? ''} {...props}>
         {children}
       </GradientSvg>
     </ExternalLink>
