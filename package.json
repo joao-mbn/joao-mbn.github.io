@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "npx prettier --write .",
+    "test": "vitest",
+    "e2e": "npx playwright test",
+    "e2e-codegen": "npx playwright codegen"
   },
   "dependencies": {
     "next": "14.0.4",
@@ -23,6 +27,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
+    "eslint-config-prettier": "^9.1.0",
     "jsdom": "^23.2.0",
     "postcss": "^8",
     "prettier": "^3.2.4",

@@ -7,7 +7,7 @@ export interface NavMenuProps extends ComponentPropsWithoutRef<'nav'> {
 export function NavMenu({ children, ...props }: NavMenuProps) {
   return (
     <nav {...props}>
-      <ul className="h-full items-baseline flex gap-4 lg:gap-6">{children}</ul>
+      <ul className="flex h-full items-baseline gap-4 lg:gap-6">{children}</ul>
     </nav>
   );
 }
