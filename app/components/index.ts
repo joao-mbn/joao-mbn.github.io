@@ -8,6 +8,5 @@ export * from './Header/Navbar';
 export * from './HexagonCointainer';
 export * from './Links';
 export * from './Masonry';
-export * from './NavMenu';
 export * from './Page';
 export * from './Paragraph';

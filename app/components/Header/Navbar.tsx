@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { NavMenu } from '..';
+import { NavMenu } from './NavMenu';
 
 const routes = [
   { path: '/', value: 'Home' },

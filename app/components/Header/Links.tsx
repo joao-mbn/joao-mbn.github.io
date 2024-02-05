@@ -1,15 +1,14 @@
-import { LinkedinLink, NavMenu, NavMenuProps } from '..';
+import { LinkedinLink } from '..';
 import { GithubLink } from '../Links/GithubLink';
+import { NavMenu } from './NavMenu';
 
-export interface LinksProps extends Omit<NavMenuProps, 'children'> {}
-
-export function Links(props: LinksProps) {
+export function Links() {
   return (
-    <NavMenu {...props}>
-      <li>
+    <NavMenu className="-translate-y-[0.4rem]">
+      <li className="lg:translate-x-[0.6rem]">
         <GithubLink />
       </li>
-      <li>
+      <li className="-translate-x-[0.35rem] lg:translate-x-0">
         <LinkedinLink />
       </li>
     </NavMenu>
