@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className + ' text-normal flex min-h-screen w-full bg-slate-50 text-slate-800'}>
         <Background />
-        <div className="mx-auto mb-5 mt-10 flex h-full w-full flex-col gap-10 px-6 lg:mb-10 lg:mt-20 lg:max-w-[1024px] lg:gap-20">
+        <div className="mx-auto mb-5 mt-10 flex w-full flex-col gap-10 px-6 lg:mb-10 lg:mt-20 lg:max-w-[1024px] lg:gap-20">
           <Header />
           {children}
           <Footer />

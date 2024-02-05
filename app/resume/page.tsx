@@ -7,7 +7,7 @@ export default function Resume() {
   return (
     <Page>
       <DescriptionBlock
-        title="About me"
+        title="Summary"
         samanticTitleTag="h1"
         className="[&&]:mt-0 [&&]:lg:mt-0"
         titleProps={{ className: 'font-semibold' }}>
