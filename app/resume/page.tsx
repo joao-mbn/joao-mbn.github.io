@@ -1,4 +1,5 @@
 import { DescriptionBlock, DescriptionBlockProps, DescriptionItem, ExternalLink, Page, Paragraph } from '../components';
+import { AZURE_CERTIFICATION, ETR_OPTIMIZATION, IELTS_VALIDATION } from '../utils/constants';
 import { getMyWorkExperience } from '../utils/datetime';
 
 export default function Resume() {
@@ -60,10 +61,7 @@ export default function Resume() {
               than halved experimental time effort, found optimal conditions one-fifth of the cost of previous ones, and
               reduced project complexity through variables importance ranking and elimination. Received two awards for
               best undergraduate research, in 2020 and 2021, by the research facility where they were carried.{' '}
-              <ExternalLink href="https://github.com/joao-mbn/etr-optimization">
-                Here you can find the source code
-              </ExternalLink>
-              .
+              <ExternalLink href={ETR_OPTIMIZATION}>Here you can find the source code</ExternalLink>.
             </DescriptionItem>
           </ul>
         </TertiaryBlock>
@@ -89,9 +87,7 @@ export default function Resume() {
         <TertiaryBlock title="" titleProps={{ className: 'm-0 p-0' }}>
           <ul>
             <DescriptionItem>
-              <ExternalLink href="https://learn.microsoft.com/api/credentials/share/en-us/JooNascimento-3680/2B7A12D96DCBCFD2?sharingId">
-                Microsoft Certified Azure Associate Developer
-              </ExternalLink>
+              <ExternalLink href={AZURE_CERTIFICATION}>Microsoft Certified Azure Associate Developer</ExternalLink>
             </DescriptionItem>
           </ul>
         </TertiaryBlock>
@@ -102,7 +98,10 @@ export default function Resume() {
             <DescriptionItem>Portuguese: Native</DescriptionItem>
             <DescriptionItem>
               English: Proficient (IELTS Band 8.5 | CEFR C2 equivalent, credential{' '}
-              <ExternalLink href="https://ielts.ucles.org.uk/">23BR000122BATJ705G</ExternalLink>)
+              <ExternalLink href={IELTS_VALIDATION} className="break-all">
+                23BR000122BATJ705G
+              </ExternalLink>
+              )
             </DescriptionItem>
           </ul>
         </TertiaryBlock>

@@ -19,7 +19,7 @@ export function DescriptionBlock<T extends 'h1' | 'h2' | 'h3' | 'h4'>({
 
   return (
     <section className={'mt-5 lg:mt-10 ' + className} {...props}>
-      <Title className={'text-very-big break-all tiny:break-words ' + titleClassName} {...otherTitleProps}>
+      <Title className={'text-very-big ' + titleClassName} {...otherTitleProps}>
         {title}
       </Title>
       {children}
