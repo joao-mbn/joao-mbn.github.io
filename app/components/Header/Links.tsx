@@ -4,7 +4,7 @@ import { NavMenu } from './NavMenu';
 
 export function Links() {
   return (
-    <NavMenu className="-translate-y-[0.4rem]">
+    <NavMenu className="hidden -translate-y-[0.6rem] sm:flex">
       <li className="lg:translate-x-[0.5rem]">
         <GithubLink />
       </li>
