@@ -15,11 +15,11 @@
 
 .backgroundHexagons {
   mask-image: url('/background-pattern.svg');
-  animation: rotate 10s linear infinite;
-  background: linear-gradient(var(--angle), theme(colors.slate.50), theme(colors.slate.200));
+  animation: rotate 5s linear infinite;
+  background: linear-gradient(var(--angle), theme(colors.slate.50), theme(colors.slate.300));
 }
 
 .background {
-  background-image: linear-gradient(calc(var(--angle) * -1), theme(colors.slate.200), theme(colors.slate.300));
-  animation: rotate 10s linear infinite;
+  background-image: linear-gradient(calc(var(--angle) * -1), theme(colors.slate.100), theme(colors.slate.400));
+  animation: rotate 7.5s linear infinite;
 }
