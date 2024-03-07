@@ -38,14 +38,14 @@ export default function About() {
           industries. In a short span, I learned the basics of web development, API management, and database querying,
           securing a full-time position as a full stack developer within a year and a half. I&apos;ve been progressing
           on this role and currently I work as a Tech Lead, giving maintenance and making enhancements to an application
-          to manage an metal coating process workflow, delivered to on-premises environments to five different
+          that manages a metal coating process workflow, delivered to on-premises environments to five different
           countries, translated in four languages.
         </Paragraph>
       </DescriptionBlock>
       <DescriptionBlock title="Life Goals" titleProps={{ className: 'font-semibold' }}>
         <Paragraph>
-          The world even though arguably better than ever, it has nonetheless far too many problems for me to think that
-          just doing my part will be sufficient. And some problems have or will have taken such proportions as to
+          Even though the world is arguably better than ever, it has nonetheless far too many problems for me to think
+          that just doing my part will be sufficient. And some problems have or will have taken such proportions as to
           endanger our species as a whole. This reasoning eventually led me to the{' '}
           <ExternalLink href={EFFECTIVE_ALTRUISM}>Effective Altruism community</ExternalLink>, in which I&apos;ve been
           increasing my engagement and interest overtime.
