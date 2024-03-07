@@ -65,11 +65,7 @@ export default function Projects() {
             title={<ExternalLink href={HOLYDAYS_PRODUCTION}>Holydays</ExternalLink>}>
             <Paragraph>
               A website that will help you strategically plan your vacations to combo with weekends and holidays. See
-              the project at{' '}
-              <ExternalLink href={HOLYDAYS_GITHUB} className="text-link">
-                Github
-              </ExternalLink>
-              .
+              the project at <ExternalLink href={HOLYDAYS_GITHUB}>Github</ExternalLink>.
             </Paragraph>
           </DescriptionBlock>
         </Card>
