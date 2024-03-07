@@ -1,6 +1,6 @@
 import { ExternalLink, HexagonImageContainer, Page, Paragraph } from './components';
+import { MyAge } from './components/MyAge';
 import { EMAIL } from './utils/constants';
-import { getMyAge } from './utils/datetime';
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
         <section className="flex flex-col">
           <h1 className="text-biggest">Hello there!</h1>
           <Paragraph>
-            I&apos;m João, a natural problem solver and Devil&apos;s Advocate with {getMyAge()} years of experience.
+            I&apos;m João, a natural problem solver and Devil&apos;s Advocate with <MyAge /> years of experience.
           </Paragraph>
           <Paragraph>
             My most relevant ability is that I tend to learn new stuff fast. Come to me with some idea, proposal,

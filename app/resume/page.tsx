@@ -1,10 +1,8 @@
 import { DescriptionBlock, DescriptionBlockProps, DescriptionItem, ExternalLink, Page, Paragraph } from '../components';
+import { MyWorkExperience } from '../components/MyWorkExperience';
 import { AZURE_CERTIFICATION, ETR_OPTIMIZATION_GITHUB, IELTS_VALIDATION } from '../utils/constants';
-import { getMyWorkExperience } from '../utils/datetime';
 
 export default function Resume() {
-  const { years, months } = getMyWorkExperience();
-
   return (
     <Page>
       <DescriptionBlock
@@ -13,8 +11,7 @@ export default function Resume() {
         className="[&&]:mt-0 [&&]:lg:mt-0"
         titleProps={{ className: 'font-semibold' }}>
         <Paragraph>
-          Full stack developer with {years} years and {months} {months === 1 ? 'month' : 'months'} of experience in web
-          development.
+          Full stack developer with <MyWorkExperience /> of experience in web development.
         </Paragraph>
       </DescriptionBlock>
       <SecondaryBlock title="Work Experience">
