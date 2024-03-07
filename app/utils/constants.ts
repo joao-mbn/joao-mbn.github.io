@@ -4,11 +4,13 @@ export const GITHUB = 'https://github.com/joao-mbn';
 export const LINKEDIN = 'https://linkedin.com/in/joaomarcosbatistanascimento';
 export const RADIX = 'https://www.radixeng.com/';
 export const THESIS = 'https://pantheon.ufrj.br/handle/11422/18995?locale=en';
-export const ETR_OPTIMIZATION = 'https://github.com/joao-mbn/etr-optimization';
-export const HOLYDAYS = 'https://get-holydays.vercel.app/';
+export const ETR_OPTIMIZATION_GITHUB = 'https://github.com/joao-mbn/etr-optimization';
+export const HOLYDAYS_PRODUCTION = 'https://get-holydays.vercel.app/';
 export const HOLYDAYS_GITHUB = 'https://github.com/joao-mbn/holydays';
-export const TYPES_HOT_PARSER = 'https://www.npmjs.com/package/@types/hot-formula-parser';
-export const HOT_PARSER = 'https://www.npmjs.com/package/hot-formula-parser';
+export const TYPES_HOT_PARSER_NPM = 'https://www.npmjs.com/package/@types/hot-formula-parser';
+export const HOT_PARSER_NPM = 'https://www.npmjs.com/package/hot-formula-parser';
+export const REACT_EXTRACT_MARKET_PLACE = 'https://marketplace.visualstudio.com/items?itemName=joao-mbn.react-extract';
+export const REACT_EXTRACT_GITHUB = 'https://github.com/joao-mbn/react-extract';
 export const AZURE_CERTIFICATION =
   'https://learn.microsoft.com/api/credentials/share/en-us/JooNascimento-3680/2B7A12D96DCBCFD2?sharingId';
 export const IELTS_VALIDATION = 'https://ielts.ucles.org.uk/';

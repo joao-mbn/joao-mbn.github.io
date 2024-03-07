@@ -1,5 +1,5 @@
 import { DescriptionBlock, DescriptionBlockProps, DescriptionItem, ExternalLink, Page, Paragraph } from '../components';
-import { AZURE_CERTIFICATION, ETR_OPTIMIZATION, IELTS_VALIDATION } from '../utils/constants';
+import { AZURE_CERTIFICATION, ETR_OPTIMIZATION_GITHUB, IELTS_VALIDATION } from '../utils/constants';
 import { getMyWorkExperience } from '../utils/datetime';
 
 export default function Resume() {
@@ -61,7 +61,7 @@ export default function Resume() {
               than halved experimental time effort, found optimal conditions one-fifth of the cost of previous ones, and
               reduced project complexity through variables importance ranking and elimination. Received two awards for
               best undergraduate research, in 2020 and 2021, by the research facility where they were carried.{' '}
-              <ExternalLink href={ETR_OPTIMIZATION}>Here you can find the source code</ExternalLink>.
+              <ExternalLink href={ETR_OPTIMIZATION_GITHUB}>Here you can find the source code</ExternalLink>.
             </DescriptionItem>
           </ul>
         </TertiaryBlock>

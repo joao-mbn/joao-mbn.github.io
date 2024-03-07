@@ -3,7 +3,7 @@ import {
   CAREER_CAPITAL,
   EARNING_TO_GIVE,
   EFFECTIVE_ALTRUISM,
-  ETR_OPTIMIZATION,
+  ETR_OPTIMIZATION_GITHUB,
   PRESSING_PROBLEMS,
   RADIX,
   THESIS,
@@ -29,7 +29,7 @@ export default function About() {
           routines for this project. The algorithms helped me achieve impressive results and was responsible, in no
           small part, for granting me two consecutive yearly awards for the best undergraduate research in the
           institution I carried it. Upon further refinements, I used{' '}
-          <ExternalLink href={ETR_OPTIMIZATION}>this algorithm</ExternalLink> for my{' '}
+          <ExternalLink href={ETR_OPTIMIZATION_GITHUB}>this algorithm</ExternalLink> for my{' '}
           <ExternalLink href={THESIS}>thesis</ExternalLink>.
         </Paragraph>
         <Paragraph>
