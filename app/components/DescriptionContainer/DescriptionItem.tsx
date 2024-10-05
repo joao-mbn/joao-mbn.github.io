@@ -1,13 +1,17 @@
 import { ComponentPropsWithoutRef } from 'react';
-import { Paragraph } from '..';
+import { Paragraph, ParagraphProps } from '..';
+import { Bullet } from '../Bullet';
 
-export interface DescriptionItemProps extends ComponentPropsWithoutRef<'li'> {}
+export interface DescriptionItemProps extends ComponentPropsWithoutRef<'li'> {
+  paragraphProps?: Omit<ParagraphProps, 'children'>;
+}
 
-export function DescriptionItem({ children, ...props }: DescriptionItemProps) {
+export function DescriptionItem({ children, paragraphProps, ...props }: DescriptionItemProps) {
   return (
-    <li className="mb-1 flex gap-4 lg:mb-2" {...props}>
-      <div className="bullet dark-bg-gradient h-4 w-4 flex-shrink-0 translate-y-2" />
-      <Paragraph className="mb-0">{children}</Paragraph>
+    <li {...props} className={'flex gap-4 ' + (props.className ?? '')}>
+      <Bullet />
+      <Paragraph {...paragraphProps}>{children}</Paragraph>
     </li>
   );
 }
+

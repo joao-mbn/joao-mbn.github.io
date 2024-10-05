@@ -6,8 +6,9 @@ export interface ParagraphProps extends ComponentPropsWithoutRef<'p'> {
 
 export function Paragraph({ children, className, ...props }: ParagraphProps) {
   return (
-    <p className={'mb-4 tiny:text-justify ' + (className ?? '')} {...props}>
+    <p className={'mb-2 tiny:text-justify  lg:mb-4 ' + (className ?? '')} {...props}>
       {children}
     </p>
   );
 }
+

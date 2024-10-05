@@ -19,12 +19,12 @@ export default function Home() {
             I&apos;m João, a natural problem solver and Devil&apos;s Advocate with <MyAge /> years of experience.
           </Paragraph>
           <Paragraph>
-            My most relevant ability is that I tend to learn new stuff fast. Come to me with some idea, proposal,
-            worldview or argument and we will be set for a good talk.{' '}
-            <ExternalLink href={`mailto:${EMAIL}`}>Send me a message</ExternalLink>.
+            My most relevant skill is to learn fast. Come to me with some idea, proposal, worldview or argument and we
+            will be set for a good talk. <ExternalLink href={`mailto:${EMAIL}`}>Send me a message</ExternalLink>.
           </Paragraph>
         </section>
       </section>
     </Page>
   );
 }
+
