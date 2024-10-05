@@ -1,25 +1,17 @@
 import { BIRTH_DATE, CAREER_START_DATE } from './constants';
 
 export function getMyAge() {
-  const today = new Date();
-
-  const yearDifference = today.getFullYear() - BIRTH_DATE.getFullYear();
-  const monthDifference = today.getMonth() - BIRTH_DATE.getMonth();
-  const dayDifference = today.getDate() - BIRTH_DATE.getDate();
-
-  if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
-    return yearDifference - 1;
-  } else {
-    return yearDifference;
-  }
+  return getDateDifferenceInMonths(new Date(), BIRTH_DATE).years;
 }
 
 export function getMyWorkExperience() {
-  const today = new Date();
+  return getDateDifferenceInMonths(new Date(), CAREER_START_DATE);
+}
 
-  let yearDifference = today.getFullYear() - CAREER_START_DATE.getFullYear();
-  let monthDifference = today.getMonth() - CAREER_START_DATE.getMonth();
-  const dayDifference = today.getDate() - CAREER_START_DATE.getDate();
+function getDateDifferenceInMonths(date1: Date, date2: Date) {
+  let yearDifference = date1.getFullYear() - date2.getFullYear();
+  let monthDifference = date1.getMonth() - date2.getMonth();
+  const dayDifference = date1.getDate() - date2.getDate();
 
   if (dayDifference < 0) {
     monthDifference -= 1;
