@@ -7,7 +7,8 @@ export function MyWorkExperience() {
 
   return (
     <>
-      {years} years and {months} {months === 1 ? 'month' : 'months'}
+      {years} years {months > 0 && `and ${months} ${months === 1 ? 'month' : 'months'}`}
     </>
   );
 }
+

@@ -1,10 +1,11 @@
+import { BIRTH_DATE, CAREER_START_DATE } from './constants';
+
 export function getMyAge() {
   const today = new Date();
-  const birthDate = new Date(1997, 1, 17);
 
-  const yearDifference = today.getFullYear() - birthDate.getFullYear();
-  const monthDifference = today.getMonth() - birthDate.getMonth();
-  const dayDifference = today.getDate() - birthDate.getDate();
+  const yearDifference = today.getFullYear() - BIRTH_DATE.getFullYear();
+  const monthDifference = today.getMonth() - BIRTH_DATE.getMonth();
+  const dayDifference = today.getDate() - BIRTH_DATE.getDate();
 
   if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
     return yearDifference - 1;
@@ -15,16 +16,20 @@ export function getMyAge() {
 
 export function getMyWorkExperience() {
   const today = new Date();
-  const internshipStartDate = new Date(2021, 4, 10);
 
-  const yearDifference = today.getFullYear() - internshipStartDate.getFullYear();
-  const monthDifference = today.getMonth() - internshipStartDate.getMonth();
-  const dayDifference = today.getDate() - internshipStartDate.getDate();
+  let yearDifference = today.getFullYear() - CAREER_START_DATE.getFullYear();
+  let monthDifference = today.getMonth() - CAREER_START_DATE.getMonth();
+  const dayDifference = today.getDate() - CAREER_START_DATE.getDate();
 
-  if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
-    const monthsInPreviousYear = 12;
-    return { years: yearDifference - 1, months: monthsInPreviousYear + monthDifference };
-  } else {
-    return { years: yearDifference, months: monthDifference };
+  if (dayDifference < 0) {
+    monthDifference -= 1;
   }
+
+  if (monthDifference < 0) {
+    yearDifference -= 1;
+    monthDifference += 12;
+  }
+
+  return { years: yearDifference, months: monthDifference };
 }
+
