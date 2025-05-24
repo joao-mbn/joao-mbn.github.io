@@ -17,7 +17,22 @@ export default function Resume() {
       </DescriptionBlock>
       <SecondaryBlock title="Work Experience">
         <TertiaryBlock title="Suger - Software Engineer (Oct. 2024 - Present)">
-          <RelevantSkills skills={['Golang']} />
+          <ul>
+            <DescriptionItem>
+              Participate on many areas of the development cycle: planning tasks, designing and implementing
+              interfaces and APIs, database mutations and queries, connection and consumption of cloud resources, tests, documentation and more.
+            </DescriptionItem>
+            <DescriptionItem>
+              Plan, design, implement and test API integrations with multiple 3rd party systems (e.g. Salesforce, Hubspot, Netsuite and QBO), adaptible and reusable for different customers.
+            </DescriptionItem>
+            <DescriptionItem>
+              Conduct technical interviews. Create and review interview projects. Evaluate candidates.
+            </DescriptionItem>
+            <DescriptionItem>
+              Oversee, onboard and assist newer engineers and get them up to speed with the codebase and business rules.
+            </DescriptionItem>
+          </ul>
+          <RelevantSkills skills={['Golang', 'n8n', 'Vue', 'Typescript', 'AWS', 'AI']} />
         </TertiaryBlock>
         <TertiaryBlock title="Radix Engineering and Software - Developer IV (Sep. 2024 - Oct. 2024)">
           <ul>
@@ -117,6 +132,9 @@ export default function Resume() {
                 23BR000122BATJ705G
               </ExternalLink>
               )
+            </DescriptionItem>
+            <DescriptionItem>
+              French: Advanced (CEFR C1, CREDENTIAL ID: 8D2CAB511C9D)
             </DescriptionItem>
           </ul>
         </TertiaryBlock>
