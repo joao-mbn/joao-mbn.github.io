@@ -23,4 +23,3 @@
   background-image: linear-gradient(calc(var(--angle) * -1), theme(colors.slate.100), theme(colors.slate.300));
   animation: rotate 7.5s linear infinite;
 }
-
