@@ -11,3 +11,4 @@ export function Paragraph({ children, className, ...props }: ParagraphProps) {
     </p>
   );
 }
+
