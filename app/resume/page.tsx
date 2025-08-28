@@ -12,49 +12,70 @@ export default function Resume() {
         className="[&&]:mt-0 [&&]:lg:mt-0"
         titleProps={{ className: 'font-semibold' }}>
         <Paragraph>
-          Fast learner and self-taught software engineer with <MyWorkExperience /> of experience in web development.
+          Fast learner and self-taught software engineer with <MyWorkExperience /> of experience.
         </Paragraph>
       </DescriptionBlock>
       <SecondaryBlock title="Work Experience">
-        <TertiaryBlock title="Suger - Software Engineer (Oct. 2024 - Present)">
+        <TertiaryBlock title="Suger - Software Engineer (Oct. 2024 - Jul. 2025)">
           <ul>
             <DescriptionItem>
-              Participate on many areas of the development cycle: planning tasks, designing and implementing
-              interfaces and APIs, database mutations and queries, connection and consumption of cloud resources, tests, documentation and more.
+              Planned and delivered features end-to-end: task planning, APIs and UIs, database changes, cloud
+              connections, tests and documentation.
             </DescriptionItem>
             <DescriptionItem>
-              Plan, design, implement and test API integrations with multiple 3rd party systems (e.g. Salesforce, Hubspot, Netsuite and QBO), adaptible and reusable for different customers.
+              Built and incremented reusable API integrations for Salesforce, HubSpot, NetSuite, Quickbooks, among
+              others, so integrations were easier to build and customize.
             </DescriptionItem>
             <DescriptionItem>
-              Conduct technical interviews. Create and review interview projects. Evaluate candidates.
+              Ran ten technical interviews: made and reviewed interview projects, interviewed candidates, wrote
+              evaluations and participated in the hiring decision.
             </DescriptionItem>
             <DescriptionItem>
-              Oversee, onboard and assist newer engineers and get them up to speed with the codebase and business rules.
+              Onboarded and mentored three engineers: discussed and clarified tasks and bugs, paired on code and
+              reviewed pull requests to help them start contributing faster. Worked leading these engineers on the
+              development of larger features from design to deployment.
             </DescriptionItem>
           </ul>
-          <RelevantSkills skills={['Golang', 'n8n', 'Vue', 'Typescript', 'AWS', 'AI']} />
+          <RelevantSkills
+            skills={[
+              'Typescript',
+              'Vue',
+              'Javascript',
+              'HTML',
+              'Tailwind CSS',
+              'CSS',
+              'Jest',
+              'Playwright',
+              'Golang',
+              'Postgres',
+              'AWS',
+              'n8n',
+            ]}
+          />
         </TertiaryBlock>
         <TertiaryBlock title="Radix Engineering and Software - Developer IV (Sep. 2024 - Oct. 2024)">
           <ul>
             <DescriptionItem>
               Optimized performance and usability of a Dashboard displaying industrial data with multiple charts
-              containing hundreds of thousands of points each and a Web GL 3D view, with:
-              <ul>
-                <DescriptionItem className="mt-1 lg:mt-2">
-                  Caching and lazy loading to reduce app stable memory consumption from 1.2~1.6GB to between 150MB~450MB
-                  under different scenarios.
-                </DescriptionItem>
-                <DescriptionItem>
-                  Request splitting and geometry filters to reduce request durations up to 95% in the best scenarios.
-                </DescriptionItem>
-                <DescriptionItem paragraphProps={{ className: '!mb-0' }}>
-                  Prefetching strategies to have features being instantly available on user click, that would otherwise
-                  take over 10s to be available.
-                </DescriptionItem>
-              </ul>
+              containing hundreds of thousands of points each and a Web GL 3D view, using strategies like caching and
+              lazy loading to bring memory consumption to a third of its value; request splitting and geometry filters
+              to reduce request duration up to 95%; and pre-fetching to reduce feature loading from more than 10s to a
+              fraction of a second.
             </DescriptionItem>
           </ul>
-          <RelevantSkills skills={['Next.js', 'React', 'Cognite', 'Three.js', 'Typescript', 'Git']} />
+          <RelevantSkills
+            skills={[
+              'Typescript',
+              'Next JS',
+              'React',
+              'Javascript',
+              'Tailwind CSS',
+              'CSS',
+              'HTML',
+              'GraphQL',
+              'ThreeJS',
+            ]}
+          />
         </TertiaryBlock>
         <TertiaryBlock title="Radix Engineering and Software - Developer III (Aug. 2023 - Sep. 2024)">
           <ul>
@@ -64,29 +85,55 @@ export default function Resume() {
             </DescriptionItem>
             <DescriptionItem>
               Led a team of four developers, providing tailored feedback to enhance performance, aiding in comprehension
-              of requirements and their implications, fostering improved questioning, workflow organization, and
-              continuous testing. Helped team members to achieve an estimated 50% to 100% increase in productivity,
-              measured by reduced time for delivering user stories.
+              of requirements and their implications, workflow organization, and continuous testing. Helped team members
+              to achieve an estimated 50% to 100% increase in productivity, measured by reduced time for delivering user
+              stories.
             </DescriptionItem>
           </ul>
-          <RelevantSkills skills={['Next.js', 'React', 'CSS', 'Three.js', 'Typescript', 'Git']} />
+          <RelevantSkills
+            skills={[
+              'Typescript',
+              'React',
+              'Javascript',
+              'Tailwind CSS',
+              'CSS',
+              'HTML',
+              'ThreeJS',
+              'C#',
+              '.NET',
+              'MS SQL',
+            ]}
+          />
         </TertiaryBlock>
         <TertiaryBlock title="Radix Engineering and Software - Developer II (Aug. 2022 - Aug. 2023)">
           <ul>
             <DescriptionItem>
               Reduced deployment time by 80% by creating deployment pipelines, reducing it from 20 minutes to 4 minutes
-              on average on multiple on-premises virtual machines, thus enabling faster testing cycles and practically
-              eliminating deployment errors.
+              on average on multiple on-premises virtual machines, thus enabling faster testing cycles and eliminating
+              deployment errors.
             </DescriptionItem>
             <DescriptionItem>
-              Saved an estimated amount of USD 10,000 in development time by reimplementing an Excel-like spreadsheet
+              Saved an estimated amount of 200 hours in development time by reimplementing an Excel-like spreadsheet
               solution with a more feature-rich and compatible library.
             </DescriptionItem>
             <DescriptionItem>
               Consistently delivered user stories within 40% to 70% of allocated timeframes.
             </DescriptionItem>
           </ul>
-          <RelevantSkills skills={['.NET', 'React', 'SQL', 'CI/CD', 'Typescript', 'Git']} />
+          <RelevantSkills
+            skills={[
+              'Typescript',
+              'React',
+              'Javascript',
+              'CSS',
+              'HTML',
+              'Redux',
+              'C#',
+              '.NET',
+              'MS SQL',
+              'Azure DevOps',
+            ]}
+          />
         </TertiaryBlock>
         <TertiaryBlock title="Radix Engineering and Software - Software Development Intern (May 2021 - Aug. 2022)">
           <ul>
@@ -96,7 +143,21 @@ export default function Resume() {
               position as Developer II, bypassing the typical entry-level position of Developer I.
             </DescriptionItem>
           </ul>
-          <RelevantSkills skills={['.NET', 'Angular', 'SQL', 'CSS', 'Typescript', 'Git']} />
+          <RelevantSkills
+            skills={[
+              'Typescript',
+              'Angular',
+              'Javascript',
+              'CSS',
+              'SCSS',
+              'HTML',
+              'RxJS',
+              'C#',
+              '.NET',
+              'MS SQL',
+              'Postgres',
+            ]}
+          />
         </TertiaryBlock>
       </SecondaryBlock>
       <SecondaryBlock title="Education">
@@ -133,9 +194,7 @@ export default function Resume() {
               </ExternalLink>
               )
             </DescriptionItem>
-            <DescriptionItem>
-              French: Advanced (CEFR C1, CREDENTIAL ID: 8D2CAB511C9D)
-            </DescriptionItem>
+            <DescriptionItem>French: Advanced (CEFR C1, CREDENTIAL ID: 8D2CAB511C9D)</DescriptionItem>
           </ul>
         </TertiaryBlock>
       </SecondaryBlock>
@@ -161,7 +220,7 @@ function SecondaryBlock(props: DescriptionBlockProps<'h2'>) {
 function RelevantSkills({ skills }: { skills: string[] }) {
   return (
     <Paragraph>
-      <div className="flex gap-1 flex-wrap">
+      <div className="flex flex-wrap gap-1">
         <span className="font-semibold">Relevant Skills:</span>
         {skills.map((s, i) => (
           <div className="flex items-center" key={s}>
@@ -173,4 +232,3 @@ function RelevantSkills({ skills }: { skills: string[] }) {
     </Paragraph>
   );
 }
-

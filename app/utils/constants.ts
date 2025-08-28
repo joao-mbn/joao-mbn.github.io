@@ -19,5 +19,5 @@ export const CAREER_CAPITAL = 'https://80000hours.org/key-ideas-2023/career-capi
 export const EARNING_TO_GIVE = 'https://80000hours.org/articles/earning-to-give/';
 export const PRESSING_PROBLEMS = 'https://80000hours.org/problem-profiles/';
 export const BIRTH_DATE = new Date(1997, 1, 17);
-export const CAREER_START_DATE = new Date(2021, 4, 10);
+export const CAREER_START_DATE = new Date(2020, 8, 1);
 
