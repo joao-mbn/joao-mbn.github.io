@@ -219,16 +219,14 @@ function SecondaryBlock(props: DescriptionBlockProps<'h2'>) {
 
 function RelevantSkills({ skills }: { skills: string[] }) {
   return (
-    <Paragraph>
-      <div className="flex flex-wrap gap-1">
-        <span className="font-semibold">Relevant Skills:</span>
-        {skills.map((s, i) => (
-          <div className="flex items-center" key={s}>
-            {i > 0 && <Bullet className="mx-2 !translate-y-0" />}
-            {s}
-          </div>
-        ))}
-      </div>
-    </Paragraph>
+    <div className="flex flex-wrap gap-1 mb-2 lg:mb-4">
+      <span className="font-semibold">Relevant Skills:</span>
+      {skills.map((s, i) => (
+        <div className="flex items-center" key={s}>
+          {i > 0 && <Bullet className="mx-2 !translate-y-0" />}
+          {s}
+        </div>
+      ))}
+    </div>
   );
 }
