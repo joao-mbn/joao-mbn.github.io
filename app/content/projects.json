@@ -1,0 +1,18 @@
+{
+  "reactExtract": {
+    "title": "React Extract",
+    "description": "Created an extension for VS Code that provides a quick way to refactor your React code. It allows you to extract a valid piece of component code into a new function, automatically passing the props and building the extracted component interface, if using Typescript."
+  },
+  "typesHotParser": {
+    "title": "@types/hot-formula-parser",
+    "description": "Added Typescript support to the hot-formula-parser, a Javascript package for interpreting strings as Excel formulas."
+  },
+  "reeOptimizations": {
+    "title": "REE Optimizations",
+    "description": "The algorithm for rare-earth elements separation process optimization used in my thesis."
+  },
+  "holydays": {
+    "title": "Holydays",
+    "description": "A website that will help you strategically plan your vacations to combo with weekends and holidays. See the project at Github."
+  }
+}
