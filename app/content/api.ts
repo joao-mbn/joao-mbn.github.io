@@ -1,3 +1,4 @@
+import { getGithubRepos } from './github';
 import homeContentData from './home.json';
 import projectsContentData from './projects.json';
 import myResumeData from './resume.json';
@@ -8,15 +9,16 @@ export async function getHomeContent(): Promise<HomeContent> {
 }
 
 export async function getProjectsContent(): Promise<ProjectsContent> {
-  return projectsContentData as ProjectsContent;
+  const githubRepositories = await getGithubRepos();
+  return {
+    ...projectsContentData,
+    githubRepositories,
+  };
 }
 
 export async function getResumeContent(): Promise<ResumeContent> {
-  // Transform my-resume.json data to match ResumeContent interface
-  // Filter out sensitive personal information
   const resume = myResumeData;
 
-  // Transform work experience data to the new array structure
   const workExperienceItems = resume.workExperience.map(experience => ({
     company: experience.company,
     position: experience.position,

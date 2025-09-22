@@ -13,6 +13,8 @@
     "e2e-codegen": "npx playwright codegen"
   },
   "dependencies": {
+    "@octokit/auth-app": "^8.1.0",
+    "@octokit/graphql": "^9.0.1",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"
@@ -38,4 +40,3 @@
     "vitest": "^1.6.0"
   }
 }
-

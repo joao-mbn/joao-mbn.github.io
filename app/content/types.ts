@@ -1,3 +1,27 @@
+export interface Language {
+  name: string;
+  color: string;
+}
+
+export interface Owner {
+  login: string;
+  avatarUrl: string;
+}
+
+export interface GithubRepository {
+  id: string;
+  name: string;
+  description: string | null;
+  url: string;
+  homepageUrl: string | null;
+  stargazerCount: number;
+  forkCount: number;
+  languages: {
+    nodes: Language[];
+  };
+  owner: Owner;
+}
+
 export interface HomeContent {
   greeting: string;
   introduction: string;
@@ -16,6 +40,7 @@ export interface ProjectsContent {
   typesHotParser: ProjectContent;
   reeOptimizations: ProjectContent;
   holydays: ProjectContent;
+  githubRepositories: GithubRepository[];
 }
 
 export interface WorkExperienceItem {
