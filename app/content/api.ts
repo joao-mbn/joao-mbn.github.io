@@ -14,4 +14,3 @@ export async function getProjectsContent(): Promise<ProjectsContent> {
 export async function getResumeContent(): Promise<ResumeContent> {
   return resumeContentData as ResumeContent;
 }
-

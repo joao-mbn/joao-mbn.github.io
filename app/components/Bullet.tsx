@@ -7,4 +7,3 @@ export function Bullet({ className, ...props }: BulletProps) {
     <div {...props} className={'bullet dark-bg-gradient h-4 w-4 flex-shrink-0 translate-y-2 ' + (className ?? '')} />
   );
 }
-

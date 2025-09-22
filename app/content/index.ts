@@ -8,4 +8,3 @@ export type {
   ResumeContent,
   WorkExperienceItem,
 } from './types';
-

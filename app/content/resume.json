@@ -33,17 +33,7 @@
       "achievements": [
         "Optimized performance and usability of a Dashboard displaying industrial data with multiple charts containing hundreds of thousands of points each and a Web GL 3D view, using strategies like caching and lazy loading to bring memory consumption to a third of its value; request splitting and geometry filters to reduce request duration up to 95%; and pre-fetching to reduce feature loading from more than 10s to a fraction of a second."
       ],
-      "skills": [
-        "Typescript",
-        "Next JS",
-        "React",
-        "Javascript",
-        "Tailwind CSS",
-        "CSS",
-        "HTML",
-        "GraphQL",
-        "ThreeJS"
-      ]
+      "skills": ["Typescript", "Next JS", "React", "Javascript", "Tailwind CSS", "CSS", "HTML", "GraphQL", "ThreeJS"]
     },
     "radixDeveloperIII": {
       "title": "Radix Engineering and Software - Developer III (Aug. 2023 - Sep. 2024)",
@@ -51,18 +41,7 @@
         "Led the implementation of a new interactive 3D visualization of an oil refinery plant for increased data contextualization, having left stakeholders impressed by the MVP and wanting to expand its features.",
         "Led a team of four developers, providing tailored feedback to enhance performance, aiding in comprehension of requirements and their implications, workflow organization, and continuous testing. Helped team members to achieve an estimated 50% to 100% increase in productivity, measured by reduced time for delivering user stories."
       ],
-      "skills": [
-        "Typescript",
-        "React",
-        "Javascript",
-        "Tailwind CSS",
-        "CSS",
-        "HTML",
-        "ThreeJS",
-        "C#",
-        ".NET",
-        "MS SQL"
-      ]
+      "skills": ["Typescript", "React", "Javascript", "Tailwind CSS", "CSS", "HTML", "ThreeJS", "C#", ".NET", "MS SQL"]
     },
     "radixDeveloperII": {
       "title": "Radix Engineering and Software - Developer II (Aug. 2022 - Aug. 2023)",
@@ -71,18 +50,7 @@
         "Saved an estimated amount of 200 hours in development time by reimplementing an Excel-like spreadsheet solution with a more feature-rich and compatible library.",
         "Consistently delivered user stories within 40% to 70% of allocated timeframes."
       ],
-      "skills": [
-        "Typescript",
-        "React",
-        "Javascript",
-        "CSS",
-        "HTML",
-        "Redux",
-        "C#",
-        ".NET",
-        "MS SQL",
-        "Azure DevOps"
-      ]
+      "skills": ["Typescript", "React", "Javascript", "CSS", "HTML", "Redux", "C#", ".NET", "MS SQL", "Azure DevOps"]
     },
     "radixIntern": {
       "title": "Radix Engineering and Software - Software Development Intern (May 2021 - Aug. 2022)",
@@ -111,12 +79,7 @@
       "achievements": [
         "Created an algorithm for rare-earth elements separation process simulation and optimization which more than halved experimental time effort, found optimal conditions one-fifth of the cost of previous ones, and reduced project complexity through variables importance ranking and elimination. Received two awards for best undergraduate research, in 2020 and 2021, by the research facility where they were carried. Here you can find the source code."
       ],
-      "skills": [
-        "Python",
-        "Chemical Engineering",
-        "Numerical Analysis",
-        "Process Optimization"
-      ]
+      "skills": ["Python", "Chemical Engineering", "Numerical Analysis", "Process Optimization"]
     }
   },
   "certifications": {
