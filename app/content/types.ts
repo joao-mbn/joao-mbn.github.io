@@ -19,15 +19,32 @@ export interface ProjectsContent {
 }
 
 export interface WorkExperienceItem {
-  title: string;
+  company: string;
+  position: string;
+  duration: string;
   achievements: string[];
   skills: string[];
 }
 
 export interface EducationItem {
-  title: string;
-  achievements: string[];
-  skills: string[];
+  institution: string;
+  degree: string;
+  duration: string;
+  location: string;
+}
+
+export interface CertificationItem {
+  name: string;
+  credential: string;
+  link: string;
+}
+
+export interface LanguageItem {
+  language: string;
+  proficiency: string;
+  credential?: string;
+  certifyingBody?: string;
+  link?: string;
 }
 
 export interface ResumeContent {
@@ -37,25 +54,18 @@ export interface ResumeContent {
   };
   workExperience: {
     title: string;
-    suger: WorkExperienceItem;
-    radixDeveloperIV: WorkExperienceItem;
-    radixDeveloperIII: WorkExperienceItem;
-    radixDeveloperII: WorkExperienceItem;
-    radixIntern: WorkExperienceItem;
+    items: WorkExperienceItem[];
   };
   education: {
     title: string;
-    ufrj: EducationItem;
+    items: EducationItem[];
   };
   certifications: {
     title: string;
-    azure: string;
+    items: CertificationItem[];
   };
   languages: {
     title: string;
-    portuguese: string;
-    english: string;
-    englishCredential: string;
-    french: string;
+    items: LanguageItem[];
   };
 }

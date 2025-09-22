@@ -5,6 +5,7 @@ import { EMAIL } from './utils/constants';
 
 export default async function Home() {
   const content = await getHomeContent();
+  const [introductionPrefix, introductionSuffix] = content.introduction.split('{{age}}');
 
   return (
     <Page>
@@ -19,7 +20,7 @@ export default async function Home() {
         <section className="flex flex-col">
           <h1 className="text-biggest">{content.greeting}</h1>
           <Paragraph>
-            {content.introduction} <MyAge /> {content.introductionSuffix}
+            {introductionPrefix} <MyAge /> {introductionSuffix}
           </Paragraph>
           <Paragraph>
             {content.description} <ExternalLink href={`mailto:${EMAIL}`}>{content.cta}</ExternalLink>.
