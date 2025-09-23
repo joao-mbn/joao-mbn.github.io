@@ -29,10 +29,6 @@ export interface ProjectContent {
 }
 
 export interface ProjectsContent {
-  reactExtract: ProjectContent;
-  typesHotParser: ProjectContent;
-  reeOptimizations: ProjectContent;
-  holydays: ProjectContent;
   githubRepositories: GithubRepository[];
 }
 

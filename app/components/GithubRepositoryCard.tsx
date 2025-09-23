@@ -15,7 +15,7 @@ export function GithubRepositoryCard({ repository, className }: GithubRepository
       <div className="mb-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <ExternalLink href={url} className="text-lg font-semibold transition-colors hover:text-blue-600">
-            {owner.login}/{name}
+            @{owner.login}/{name}
           </ExternalLink>
         </div>
         {homepageUrl && (

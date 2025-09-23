@@ -1,8 +1,8 @@
 import { getGithubRepos } from './github';
 import homeContentData from './home.json';
 import projectsContentData from './projects.json';
-import myResumeData from './resume.json';
-import { HomeContent, ProjectsContent, ResumeContent } from './types';
+import resumeContentData from './resume.json';
+import { GithubRepository, HomeContent, ProjectsContent, ResumeContent } from './types';
 
 export async function getHomeContent(): Promise<HomeContent> {
   return homeContentData as HomeContent;
@@ -10,14 +10,17 @@ export async function getHomeContent(): Promise<HomeContent> {
 
 export async function getProjectsContent(): Promise<ProjectsContent> {
   const githubRepositories = await getGithubRepos();
+  const projects = projectsContentData as Record<string, Partial<GithubRepository>>;
   return {
-    ...projectsContentData,
-    githubRepositories,
+    githubRepositories: githubRepositories.map(repo => ({
+      ...repo,
+      ...projects[`@${repo.owner.login}/${repo.name}`],
+    })),
   };
 }
 
 export async function getResumeContent(): Promise<ResumeContent> {
-  const resume = myResumeData;
+  const resume = resumeContentData;
 
   const workExperienceItems = resume.workExperience.map(experience => ({
     company: experience.company,
