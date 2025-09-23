@@ -6,7 +6,6 @@ import { NavMenu } from './NavMenu';
 
 const routes = [
   { path: '/', value: 'Home' },
-  /* { path: '/about', value: 'About' }, */
   { path: '/projects', value: 'Projects' },
   { path: '/resume', value: 'Resume' },
 ];
