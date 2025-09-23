@@ -13,13 +13,13 @@ export function Navbar() {
   const activePath = usePathname();
 
   return (
-    <nav className="flex-grow sm:flex-grow-0">
+    <nav className="flex-grow translate-y-[0.45rem] sm:flex-grow-0">
       <ul className="flex h-full flex-wrap items-baseline justify-center gap-4 sm:justify-start lg:gap-6">
         {routes.map(({ path, value }) => (
           <li key={path}>
             <Link
               href={path}
-              className={'p-2 text-base sm:text-lg lg:p-3 ' + (path === activePath ? 'text-link-active' : 'text-link')}>
+              className={'p-2 text-base sm:text-xl lg:p-3 ' + (path === activePath ? 'text-link-active' : 'text-link')}>
               {value}
             </Link>
           </li>
