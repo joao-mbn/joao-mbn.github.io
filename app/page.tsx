@@ -12,7 +12,7 @@ export default async function Home() {
       <section className="mx-auto flex flex-col-reverse items-center gap-2 sm:flex-row sm:items-start">
         <HexagonImageContainer id="greetings">
           <image
-            className="h-[110px] w-[110x] grayscale transition-all duration-300 hover:grayscale-0"
+            className="h-[110px] w-[110x] grayscale transition-all duration-300"
             xlinkHref="/me.webp"
             clipPath="url(#greetings)"
           />
