@@ -1,13 +1,3 @@
-export interface Language {
-  name: string;
-  color: string;
-}
-
-export interface Owner {
-  login: string;
-  avatarUrl: string;
-}
-
 export interface GithubRepository {
   id: string;
   name: string;
@@ -17,9 +7,12 @@ export interface GithubRepository {
   stargazerCount: number;
   forkCount: number;
   languages: {
-    nodes: Language[];
+    nodes: { name: string; color: string }[];
   };
-  owner: Owner;
+  owner: { login: string; avatarUrl: string };
+  repositoryTopics: {
+    nodes: { topic: { name: string } }[];
+  };
 }
 
 export interface HomeContent {

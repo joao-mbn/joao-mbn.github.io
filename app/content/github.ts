@@ -46,6 +46,13 @@ export async function getGithubRepos(): Promise<GithubRepository[]> {
                 homepageUrl
                 stargazerCount
                 forkCount
+                repositoryTopics(first: 5) {
+                  nodes {
+                    topic {
+                      name
+                    }
+                  }
+                }
                 languages(first: 5) {
                   nodes {
                     name
