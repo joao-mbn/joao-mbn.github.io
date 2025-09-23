@@ -1,15 +1,15 @@
-import { GithubRepositoryCard, Masonry, Page } from '../components';
+import { GithubRepositoryCard, Page } from '../components';
 import { getProjectsContent } from '../content';
 
 export default async function Projects() {
   const { githubRepositories: repositories } = await getProjectsContent();
   return (
     <Page>
-      <Masonry>
+      <div className="[&>:not(:last-child)]:mb-6 [&>:not(:last-child)]:border-b-2 [&>:not(:last-child)]:border-slate-800 [&>:not(:last-child)]:pb-6">
         {repositories.map(repository => (
-          <GithubRepositoryCard key={repository.id} repository={repository} className="[&&]:mt-0 [&&]:lg:mt-0" />
+          <GithubRepositoryCard key={repository.id} repository={repository} />
         ))}
-      </Masonry>
+      </div>
     </Page>
   );
 }
