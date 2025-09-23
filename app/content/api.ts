@@ -1,8 +1,8 @@
+import { GithubRepository, HomeContent, ProjectsContent, ResumeContent } from '../types';
 import { getGithubRepos } from './github';
 import homeContentData from './home.json';
 import projectsContentData from './projects.json';
 import resumeContentData from './resume.json';
-import { GithubRepository, HomeContent, ProjectsContent, ResumeContent } from './types';
 
 export async function getHomeContent(): Promise<HomeContent> {
   return homeContentData as HomeContent;

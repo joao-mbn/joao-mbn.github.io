@@ -1,9 +1,8 @@
 import { createAppAuth } from '@octokit/auth-app';
 import { graphql } from '@octokit/graphql';
+import { GithubRepository } from '../types';
 import { GITHUB_USERNAME } from '../utils/constants';
-import { GithubRepository } from './types';
 
-// GraphQL Response Types
 interface PinnedItemsResponse {
   user: {
     pinnedItems: {

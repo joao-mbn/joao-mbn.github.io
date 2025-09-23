@@ -1,5 +1,5 @@
 import { Card, ExternalLink } from '.';
-import { GithubRepository } from '../content/types';
+import { GithubRepository } from '../types';
 
 interface GithubRepositoryCardProps {
   repository: GithubRepository;
