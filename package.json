@@ -7,15 +7,18 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "npx prettier --write .",
+    "prettier": "npx prettier --write app/**/*.{ts,tsx,json,md}",
     "test": "vitest",
     "e2e": "npx playwright test",
     "e2e-codegen": "npx playwright codegen"
   },
   "dependencies": {
+    "@octokit/auth-app": "^8.1.0",
+    "@octokit/graphql": "^9.0.1",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.1",

@@ -1,16 +1,17 @@
-import { LinkedinLink } from '..';
-import { GithubLink } from '../Links/GithubLink';
-import { NavMenu } from './NavMenu';
+import { GITHUB, LINKEDIN } from '@/app/utils/constants';
+import { GrLinkedin } from 'react-icons/gr';
+import { VscGithub } from 'react-icons/vsc';
+import { ExternalLink } from '..';
 
 export function Links() {
   return (
-    <NavMenu className="hidden -translate-y-[0.6rem] sm:flex">
-      <li className="lg:translate-x-[0.5rem]">
-        <GithubLink />
-      </li>
-      <li className="-translate-x-[0.3rem] lg:translate-x-0">
-        <LinkedinLink />
-      </li>
-    </NavMenu>
+    <nav className="hidden gap-4 sm:flex lg:gap-6">
+      <ExternalLink href={GITHUB}>
+        <VscGithub className="h-10 w-10" />
+      </ExternalLink>
+      <ExternalLink href={LINKEDIN}>
+        <GrLinkedin className="h-10 w-10" />
+      </ExternalLink>
+    </nav>
   );
 }

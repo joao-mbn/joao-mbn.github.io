@@ -1,0 +1,6 @@
+{
+  "@DefinitelyTyped/DefinitelyTyped": {
+    "homepageUrl": "https://www.npmjs.com/package/@types/hot-formula-parser",
+    "description": "Added Typescript support to the hot-formula-parser, a Javascript package for interpreting strings as Excel formulas."
+  }
+}
