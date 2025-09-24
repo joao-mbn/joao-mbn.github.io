@@ -8,6 +8,10 @@ const inter = Exo_2({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'João Nascimento',
   description: "João's personal website",
+  other: {
+    'http-equiv': 'refresh',
+    content: '0; url=https://joaonascimento.me/',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
