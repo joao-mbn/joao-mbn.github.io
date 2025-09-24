@@ -1,6 +1,6 @@
-import { GradientSvgProps } from '.';
+import { ComponentPropsWithoutRef } from 'react';
 
-export interface HexagonImageContainerProps extends Omit<GradientSvgProps, 'gradientOn'> {}
+export interface HexagonImageContainerProps extends ComponentPropsWithoutRef<'svg'> {}
 
 export function HexagonImageContainer({ children, id, ...props }: HexagonImageContainerProps) {
   return (
