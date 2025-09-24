@@ -8,15 +8,14 @@ const inter = Exo_2({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'João Nascimento',
   description: "João's personal website",
-  other: {
-    'http-equiv': 'refresh',
-    content: '0; url=https://joaonascimento.me/',
-  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <meta httpEquiv="refresh" content="0; url=https://joaonascimento.me/" />
+      </head>
       <body className={inter.className + ' text-normal flex min-h-screen w-full bg-slate-50 text-slate-800'}>
         <Background />
         <div className="mx-auto mb-5 mt-10 flex w-full flex-col gap-10 px-6 lg:my-10 lg:max-w-[1024px] lg:gap-20">
