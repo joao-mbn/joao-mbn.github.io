@@ -7,7 +7,7 @@ export function HexagonImageContainer({ children, id, ...props }: HexagonImageCo
     <svg
       viewBox="0 0 100 100"
       id={`path-${id}`}
-      className="h-56 w-56 overflow-visible fill-none stroke-slate-800 stroke-1 tiny:h-80 tiny:w-80 lg:h-96 lg:w-96"
+      className="h-56 w-56 overflow-visible fill-none stroke-slate-800 stroke-1 tiny:h-80 tiny:w-80 sm:translate-y-3 lg:h-96 lg:w-96"
       {...props}>
       <defs>
         <clipPath id={id}>
