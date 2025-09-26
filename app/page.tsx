@@ -1,7 +1,6 @@
-import { ExternalLink, HexagonImageContainer, Page, Paragraph } from './components';
+import { HexagonImageContainer, Page, Paragraph } from './components';
 import { MyAge } from './components/MyAge';
 import { getHomeContent } from './content';
-import { EMAIL } from './utils/constants';
 
 export default async function Home() {
   const content = await getHomeContent();
@@ -22,9 +21,9 @@ export default async function Home() {
           <Paragraph>
             {introductionPrefix} <MyAge /> {introductionSuffix}
           </Paragraph>
-          <Paragraph>
-            {content.description} <ExternalLink href={`mailto:${EMAIL}`}>{content.cta}</ExternalLink>.
-          </Paragraph>
+          {content.description.split('\n\n').map((d, i) => (
+            <Paragraph key={i}>{d}</Paragraph>
+          ))}
         </section>
       </section>
     </Page>
