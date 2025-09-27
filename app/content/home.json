@@ -1,5 +1,6 @@
 {
   "greeting": "Hello there!",
-  "introduction": "I'm João, a {{age}} years old Software Engineer originally from Rio de Janeiro, Brazil, and currently living Vancouver, Canada.",
+  "introduction": "I'm João, a {{age}} years old Software Engineer originally from Rio de Janeiro, Brazil, and currently living in Vancouver, Canada.",
   "description": "My career has been in software engineering, but my educational background is in Chemical Engineering and Chemistry, where I hold a Bachelor's and a Technician degree, respectively.\n\nI'm confident that my greatest talent is being a generalist: to connect ideas across different fields, and to learn new things quickly.\n\nRather than defining myself as an XYZ programmer, I see myself as a problem solver that uses technologies, but is not defined by it."
 }
+
